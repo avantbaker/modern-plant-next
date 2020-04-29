@@ -2,10 +2,9 @@ import Head from 'next/head'
 
 export default function App() {
   return (
-    <div className="app">
+    <div className="page-container">
       <Head>
         <title>Modern Plant</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
     </div>
   )
