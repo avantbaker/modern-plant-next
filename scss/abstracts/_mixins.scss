@@ -33,6 +33,11 @@
     @content;
   }
 }
+@mixin desktop-above {
+  @media (min-width: #{$breakpoint-lg}) {
+    @content;
+  }
+}
 
 @mixin large-desktop {
   @media (max-width: #{$breakpoint-xl}) {

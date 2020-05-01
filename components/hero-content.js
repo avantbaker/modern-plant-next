@@ -1,12 +1,13 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
+import Button from './button';
 
 const HeroContent = ({ 
     children, 
     title, 
     subtitle, 
     paragraph, 
-    buttonText, 
+    buttonText,
     showBackground = true
 }) => {
   return (
@@ -21,7 +22,7 @@ const HeroContent = ({
         <h1 className="heading-1">{ title }</h1>
         <h6 className="heading-6--caps">{ subtitle }</h6>
         <h5 className="heading-5 hero-content__paragraph">{paragraph}</h5>
-        <button className="btn btn-primary heading-6">{ buttonText }</button>
+        <Button text={buttonText} />
       </div>
       { children }
     </div>

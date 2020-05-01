@@ -5,7 +5,7 @@ const HeroBackground = ({ src }) => {
     <div
       className='hero-background'
       style={{
-        'background-image': `url(${src})`
+        'backgroundImage': `url(${src})`
       }}
     />
   );

@@ -19,7 +19,7 @@
         top: -13rem;
         left: -13rem;
 
-        @include phone {
+        @include tablet {
             left: unset;
             right: -13rem;
         }

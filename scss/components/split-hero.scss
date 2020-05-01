@@ -14,7 +14,7 @@
         flex: 0 1 50%;
         background-color: $color-grey-light;
         @include desktop {
-            flex: 0 1 40%;
+            flex: 0 1 50%;
         }
         @include phone-landscape {
             flex: 0 1 80vh;
@@ -23,7 +23,7 @@
     &__right {
         flex: 1 1 50%;
         @include desktop {
-            flex: 1 1 60%;
+            flex: 1 1 50%;
         }
         @include phone-landscape {
             flex: 0 0 100%;
