@@ -1,0 +1,44 @@
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    
+    &__content {
+
+        margin-top: 10rem;
+        width: 80%;
+        position: relative;
+
+        @include tablet {
+            margin-top: 2rem;
+        }
+
+        & >:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__paragraph {
+        width: 60%;
+        margin-bottom: 6rem !important;
+    }
+    
+    &__background {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
+    &__fingerprint {
+        z-index: -1;
+        position: absolute;
+        top: -30%;
+
+        @include tablet {
+            display:none;
+        }
+    }
+    
+} 

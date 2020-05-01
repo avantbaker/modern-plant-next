@@ -1,0 +1,51 @@
+.blue-band {
+    padding: 20rem 0;
+    width: 100%;
+
+    @include phone {
+        padding: 0 0 15rem 0;
+    }
+    &__background {
+        position: relative;
+        background-color: $color-brand-light;
+    }
+
+    .bottle-images {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+
+        &__image-wrapper {
+            position: absolute;
+            width: 20rem;
+
+            &--top-right {
+                top: -15%;
+                right: 0;
+                img {
+                    transform: rotate(-45deg) 
+                }
+                @include desktop-below {
+                    top: -18rem;
+                    img {
+                        transform: rotate(-65deg) 
+                    }
+                }
+            }
+            &--bottom-left {
+                bottom: -15%;
+                left: 20%;
+                img {
+                    transform: rotate(45deg) 
+                }
+                @include desktop-below {
+                    display: none;
+                }
+            }
+        }
+    }
+
+}

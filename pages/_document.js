@@ -15,6 +15,7 @@ export default class MyDocument extends Document {
         <Head>
             <link rel="icon" href="/favicon.ico" />
             <link rel="stylesheet" href="https://use.typekit.net/rdi0mnt.css"></link>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" ></link>
             <style
                 data-emotion-css={this.props.ids.join(' ')}
                 dangerouslySetInnerHTML={{ __html: this.props.css }}

@@ -1,3 +1,8 @@
+a {
+    text-decoration: none;
+    color: $color-black;
+}
+
 .heading-1 {
     font-family: bureau-grot-condensed, sans-serif;
     font-weight: 500;
@@ -6,6 +11,11 @@
     font-size: 13rem;
     letter-spacing: 4px;
     line-height: 15.6rem;
+
+    @include phone {
+        font-size: 10rem;
+        line-height: 10rem;
+    }
 }
 
 .heading-2 {
