@@ -1,6 +1,9 @@
 .dual-cards {
     padding-bottom: 20rem;
     @include tablet {
+        padding-bottom: 12rem;
+    }
+    @include tablet {
         &__card {
             margin-bottom: 4rem;
             padding: 0 3rem;

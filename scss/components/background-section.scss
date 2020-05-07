@@ -3,7 +3,7 @@
     padding: 0;
     background-position: center;
     background-size: cover;
-    margin-bottom: 20rem;
+    margin-bottom: 12rem;
     position: relative;
 
     &::before { 
@@ -65,15 +65,5 @@
             margin-bottom: 5rem;
         }
     }
-    // &__overlay {
-    //     display: none;
-    //     @include phone {
-    //         display: block;
-    //         position: absolute;
-    //         top: 0;
-    //         left: 0;
-    //         right: 0;
-    //         bottom: 0;
-    //     }
-    // }
+
 }

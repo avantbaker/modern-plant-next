@@ -18,8 +18,12 @@
     margin: $margin-xxl 0;
 }
 
+.mb-xxl {
+    margin-bottom: $margin-xxl !important;
+}
+
 .mb-xl {
-    margin-bottom: $margin-xl;
+    margin-bottom: $margin-xl !important;
 }
 
 .mb-lg {

@@ -6,6 +6,7 @@ import HomeHeroContainer from '../components/home/hero-container';
 import HomeIntroInfoContainer from '../components/home/info-intro-container';
 import HomeDualCardsContainer from '../components/home/dual-cards-container';
 import HomeBackgroundCalloutContainer from '../components/home/background-callout-container'; 
+import HomeGridGallerySection from '../components/home/grid-gallery-section';
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
         <HomeIntroInfoContainer />
         <HomeDualCardsContainer />
         <HomeBackgroundCalloutContainer />
+        <HomeGridGallerySection />
       </div>
     </Fragment>
   );
