@@ -5,6 +5,7 @@ import { jsx } from '@emotion/core';
 import HomeHeroContainer from '../components/home/hero-container';
 import HomeIntroInfoContainer from '../components/home/info-intro-container';
 import HomeDualCardsContainer from '../components/home/dual-cards-container';
+import HomeBackgroundCalloutContainer from '../components/home/background-callout-container'; 
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <HomeHeroContainer />
         <HomeIntroInfoContainer />
         <HomeDualCardsContainer />
+        <HomeBackgroundCalloutContainer />
       </div>
     </Fragment>
   );
