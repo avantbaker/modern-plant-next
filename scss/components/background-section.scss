@@ -1,5 +1,5 @@
 .background-section {
-    height: 90vh;
+    height: 80vh;
     padding: 0;
     background-position: center;
     background-size: cover;
@@ -45,7 +45,7 @@
         flex-direction: column;
         height: 100%;
         justify-content: flex-end;
-        padding: 10rem 10rem 16rem 10rem;
+        padding: 10rem 10rem 10rem 10rem;
         z-index: 3;
 
         @include desktop {

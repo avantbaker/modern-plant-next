@@ -7,6 +7,7 @@ import HomeIntroInfoContainer from '../components/home/info-intro-container';
 import HomeDualCardsContainer from '../components/home/dual-cards-container';
 import HomeBackgroundCalloutContainer from '../components/home/background-callout-container'; 
 import HomeGridGallerySection from '../components/home/grid-gallery-section';
+import HomeBlogSliderContainer from '../components/home/blog-slider';
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
         <HomeDualCardsContainer />
         <HomeBackgroundCalloutContainer />
         <HomeGridGallerySection />
+        <HomeBlogSliderContainer />
       </div>
     </Fragment>
   );

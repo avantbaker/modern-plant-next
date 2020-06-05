@@ -16,6 +16,7 @@ export default class App extends NextApp {
         <CacheProvider value={cache}>
           <Header />
           <Component {...pageProps} />
+          
         </CacheProvider>
       </div>
     );
