@@ -1,0 +1,136 @@
+.footer {
+    padding: 5rem;
+
+    &__section-wrapper {
+        display: flex;
+        &:not(:last-child) {
+            margin-bottom: 8rem;
+        }
+        @include tablet {
+            flex-direction: column;
+        }
+
+        &--top {
+            .footer__section {
+                display: flex;
+                flex: 1;
+                &--newsletter {
+                    flex: 1.5
+                }
+                @include tablet {
+                    &:not(:last-child) {
+                        margin-bottom: 8rem;
+                    }
+                }
+            }
+        }
+        &--bottom {
+
+            @include tablet {
+                flex-direction: column-reverse;
+            }
+
+            .footer__section {
+                display: flex;
+                flex: 1;
+                &:first-child {
+                    flex: 2
+                }
+                &--notice {
+                    flex: 1.5;
+                    @include tablet {
+                       margin-bottom: 4rem;
+                    }
+                }
+                &--copyright {
+                    flex-direction: row;
+                    align-items: flex-end;
+                    & > *:not(:last-child) {
+                        margin-right: 2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &__section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__social {
+        display: flex;
+        & > *:not(:last-child) {
+            margin-right: 2rem;
+        }
+    }
+
+    &__resources {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2,1fr);
+
+        @include tablet {
+            max-width: 50%
+        }
+    }
+
+    &__newsletter-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        > * {
+            flex: 1;
+        }
+        .paragraph {
+            margin-right: 1.3rem;
+        }
+        .no-flex {
+            flex: none;
+        }
+        @include tablet {
+            flex-direction: column;
+            align-items: flex-start;
+
+            & > :first-child {
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+
+    &__form {
+        display: flex;
+        align-items: center;
+        flex: 1.5;
+    }
+
+    &__field-wrapper {
+        flex: 1;
+    }
+
+    &__input {
+        width: 90% !important;
+    }
+
+    &__icon {
+        font-size: 2rem;
+    }
+
+    &__logo-wrapper {
+        display: flex;
+        max-width: 30%;
+    }
+    &__logo {
+        display: flex;
+        align-items: center;
+    }
+    &__img {
+        width: 100%;
+    }
+
+    &__copyright-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}
