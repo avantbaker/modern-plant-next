@@ -1,11 +1,13 @@
 import React from 'react'
 import HeroContent from '../hero-content';
 
-export default function RemediesHeroContentRight() {
+export default function RemediesHeroContentRight({
+    backgroundColor = ''
+}) {
     return (
         <HeroContent
           type='remedies-details'
-          backgroundColor='color-secondary'
+          backgroundColor={backgroundColor}
           content={
             <div className='hero-content__remedy-details'>
               <div className='hero-content__remedy-details__logo-container'>

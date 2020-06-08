@@ -3,11 +3,15 @@ import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle, faCartPlus, faBars } from '@fortawesome/free-solid-svg-icons'
 
-export default function Header() {
+export default function Header({
+    className = ''
+}) {
     return (
-        <div className="header">
+        <div id="header" className={`header ${className}`}>
             <div className="header__logo-wrapper">
-                <img src="global/logo-horizontal-black.png" alt="Logo Horizontal Black" className="header__logo"/>
+                <Link href="/">
+                    <img src="global/logo-horizontal-black.png" alt="Logo Horizontal Black" className="header__logo"/>
+                </Link>
             </div>
             <div className="header__navigation">
                 <div className="header__links">

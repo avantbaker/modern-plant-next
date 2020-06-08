@@ -3,9 +3,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faInstagram, faFacebookF } from '@fortawesome/free-brands-svg-icons'
 import Input from './input';
 
-export default function Footer() {
+export default function Footer({
+    className = '',
+    key = ''
+}) {
     return (
-        <div className="footer">
+        <div className={`footer ${className}`} key={key}>
             <div className="footer__section-wrapper footer__section-wrapper--top">
                 <div className="footer__section footer__section--follow">
                     <div className="footer__title heading-6--caps mb-md">Follow us.</div>

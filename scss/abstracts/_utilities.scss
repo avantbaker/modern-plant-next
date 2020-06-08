@@ -42,10 +42,22 @@
     margin-bottom:  $margin-xs !important;
 }
 
+.bg-color-primary {
+    background-color: $color-primary !important;
+}
 .bg-color-secondary {
     background-color: $color-secondary !important;
 }
+.bg-color-tertiary {
+    background-color: $color-tertiary !important;
+}
 
-.text-secondary {
+.text-color-primary {
+    color: $color-primary !important;
+}
+.text-color-secondary {
     color: $color-secondary !important;
+}
+.text-color-tertiary {
+    color: $color-tertiary !important;
 }

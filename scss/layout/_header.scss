@@ -6,7 +6,7 @@
     right: 0;
     display: flex;
     justify-content: space-between;
-
+    z-index: 10000000;
     &__logo-wrapper {
         max-width: 22rem;
     }
@@ -63,6 +63,15 @@
     &__icon {
         font-size: 1.8rem;
         margin: 0 1rem;
+    }
+
+    &--light {
+        .header__link {
+            color: $color-white !important;
+        }
+        .header__icon > path {
+            color: $color-white !important;
+        }
     }
 
 }

@@ -11,11 +11,15 @@ injectGlobal`
 
 export default class App extends NextApp {
   render() {
-    const { Component, pageProps } = this.props;
+    const { Component, pageProps, router } = this.props;
+    let className;
+    if (router.route === '/remedies') {
+      className = 'header--light'
+    }
     return (
       <div className='app-container'>
         <CacheProvider value={cache}>
-          <Header />
+          <Header className={className} />
           <Component {...pageProps} />
           <Footer />
         </CacheProvider>

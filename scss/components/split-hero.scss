@@ -4,6 +4,14 @@
     overflow: hidden;
     position: relative;
     z-index: -1;
+    transition: .8s opacity ease;
+
+    &.fp-section {
+        opacity: 0;
+        &.active {
+            opacity: 1;
+        }
+    }
 
     @include phone-landscape {
         height: auto;
