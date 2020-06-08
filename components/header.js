@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle, faCartPlus, faBars } from '@fortawesome/free-solid-svg-icons'
 
@@ -10,7 +11,9 @@ export default function Header() {
             </div>
             <div className="header__navigation">
                 <div className="header__links">
-                    <a className="header__link paragraph" href="#">Remedies</a>
+                    <Link href="/remedies">
+                        <a className="header__link paragraph">Remedies</a>
+                    </Link>
                     <a className="header__link paragraph" href="#">Methods</a>
                     <a className="header__link paragraph" href="#">Subscription</a>
                     <a className="header__link paragraph" href="#">About</a>

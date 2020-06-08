@@ -37,6 +37,13 @@
     background: transparent;
 }
 
+.btn-secondary--white {
+    border: 2px solid $color-white;
+    background: transparent;
+    color: white;
+    padding: 1rem 4rem;
+}
+
 .btn-tertiary {
     text-decoration: underline;
 }

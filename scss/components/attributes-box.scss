@@ -1,0 +1,28 @@
+.attributes-box {
+    color: white;
+    display: flex;
+    flex-direction: column;
+
+    &__row {
+        display: flex;
+        justify-content: space-around;
+        border-top: 2px solid white;
+        padding: 1.5rem 0;
+        &:last-of-type {
+            border-bottom: 2px solid white;
+        }
+    }
+
+    &__item {
+        flex: auto;
+        color: $color-white;
+        padding: .5rem 3rem;
+        &:nth-of-type(odd) {
+            border-right: 2px solid white;
+        }
+        &:nth-of-type(even) {
+            text-align: right;
+        }
+
+    };
+}

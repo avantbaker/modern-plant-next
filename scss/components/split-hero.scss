@@ -2,6 +2,8 @@
     display: flex;
     height: 100vh;
     overflow: hidden;
+    position: relative;
+    z-index: -1;
 
     @include phone-landscape {
         height: auto;
