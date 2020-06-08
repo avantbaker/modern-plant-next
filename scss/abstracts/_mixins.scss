@@ -5,6 +5,12 @@
   }
 }
 
+@mixin phone-short {
+  @media (max-width: #{$breakpoint-sm}) and (max-height: 735px) {
+    @content;
+  }
+}
+
 @mixin phone-landscape {
   @media (max-width: #{$breakpoint-lg}) and (orientation: landscape) {
     @content;
