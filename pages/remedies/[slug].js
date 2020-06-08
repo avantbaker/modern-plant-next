@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import Head from 'next/head'
+import RemedyDetailsHeroContainer from '../../components/remedies-details/hero-container';
 
 export default function Remedy() {
     return (
-        <div>
-            This is a Remedy
-        </div>
+        <Fragment>
+            <Head>
+                <title>Modern Plant - Remedies</title>
+            </Head>
+            <div className='page-container'>
+                <RemedyDetailsHeroContainer />
+            </div>
+        </Fragment>
     )
 }

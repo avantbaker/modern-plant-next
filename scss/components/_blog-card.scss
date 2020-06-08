@@ -1,0 +1,23 @@
+.blog-card {
+    display: grid;
+    grid-template-columns: 45% 55%;
+
+    &__image {
+        background-color: gray;
+        height: 24rem;
+        background-position: center;
+        background-size: cover;
+        img {
+            width: 100%;
+        }
+    }
+    &__content {
+        display: flex;
+        padding: 1rem 3rem;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__btn {
+        min-width: 15rem;
+    }
+}

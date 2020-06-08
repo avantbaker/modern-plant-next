@@ -1,0 +1,31 @@
+.section-content {
+    position: relative;
+
+    &__content {
+        padding: $section-blue-bar-content-padding 0;
+    }
+
+    &__stamp-wrapper {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
+
+    &__stamp {
+        position: absolute;
+        width: 45rem;
+        top: -13rem;
+        left: -13rem;
+
+        @include tablet {
+            left: unset;
+            right: -13rem;
+        }
+    }
+
+    &__stamp-img {
+        width: 100%;
+    }
+}

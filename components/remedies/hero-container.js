@@ -8,24 +8,27 @@ import Footer from '../footer';
 let remedies = [
     {
         title: 'Desert Sage',
-        color: 'color-secondary'
+        color: 'color-secondary',
+        slug: 'desert-sage'
     },
     {
         title: 'Cherry Wine',
-        color: 'color-tertiary'
+        color: 'color-tertiary',
+        slug: 'cherry-wine'
     },
     {
         title: 'Holy Lavender',
-        color: 'color-primary'
+        color: 'color-primary',
+        slug: 'holy-lavender'
     },
 ];
 
 let components = [
-    ...remedies.map(({ title, color }, i) => (
+    ...remedies.map(({ title, color, slug }, i) => (
         <SplitHero
           className='section'
           key={i}
-          overlay={<RemediesHeroOverlay />}
+          overlay={<RemediesHeroOverlay slug={slug} />}
           contentLeft={<RemediesHeroContentLeft 
             title={title}
             color={color}

@@ -1,0 +1,49 @@
+.hero-remedy-details {
+    max-width: 75%;
+    position: relative;
+    flex-direction: column;
+    display: flex;
+
+    @include phone {
+        max-width: 100%;
+    }
+
+    &__title {
+        align-self: flex-end;
+        text-align: right;
+        white-space: nowrap;
+
+        @include desktop {
+            display: none;
+        }
+    }
+}
+
+.remedy-details-hero {
+    &__right {
+        @include desktop {
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 3.5rem;
+        }
+    }
+}
+.certification {
+    display: flex;
+    transform: translateY(8rem);
+    @include phone-short {
+        display: none;
+    }
+    @include phone {
+        transform: translateY(8rem);
+    }
+    &__item {
+        height: 6rem;
+        width: 6rem;
+        background-color: white;
+
+        &:not(:last-of-type) {
+            margin-right: 2rem;
+        }
+    }
+}

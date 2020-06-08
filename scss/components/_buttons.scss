@@ -1,0 +1,49 @@
+.btn {
+    display: inline-block;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    background: $color-white;
+    color: $color-black;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, 
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.btn:hover,
+.btn:focus {
+    background: $color-white;
+}
+
+.btn:focus {
+    outline: 1px solid $color-black;
+    outline-offset: -4px;
+}
+
+.btn:active {
+    transform: scale(0.99);
+}
+
+.btn-primary {
+    border: 2px solid $color-black;
+}
+
+.btn-secondary {
+    border: 2px solid $color-black;
+    background: transparent;
+}
+
+.btn-secondary--white {
+    border: 2px solid $color-white;
+    background: transparent;
+    color: white;
+    padding: 1rem 4rem;
+}
+
+.btn-tertiary {
+    text-decoration: underline;
+}

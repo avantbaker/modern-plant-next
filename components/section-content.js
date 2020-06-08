@@ -5,7 +5,7 @@ export default function SectionContent() {
         <div className="section-content">
             <div className="section-content__stamp-wrapper">
                 <div className="section-content__stamp">
-                    <img className="section-content__stamp-img" src="global/stamp-black.png" alt="Black Stamp"/>
+                    <img className="section-content__stamp-img" src="/global/stamp-black.png" alt="Black Stamp"/>
                 </div>
             </div>
             <div className="section-content__content">

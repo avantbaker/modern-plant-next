@@ -1,0 +1,18 @@
+.big-card {
+    &__featured-img {
+        height: 30rem;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__content {
+        background-color: $color-grey-light;
+        padding: 8rem 0;
+        text-align: center;
+    }
+
+    &__content-title {
+        margin-bottom: 2rem;
+    }
+
+}

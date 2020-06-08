@@ -1,0 +1,7 @@
+.grid-gallery-section {
+    &__container {
+        & > * {
+            margin-bottom: 1.8rem;
+        }
+    }
+}

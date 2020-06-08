@@ -1,0 +1,13 @@
+.box-title {
+    padding: 3rem 6rem;
+    max-width: 80%;
+    margin: 0 auto 4rem auto;
+    border: 2px solid $color-brand;
+    text-transform: capitalize;
+    color: $color-brand;
+    white-space: nowrap;
+
+    @include tablet {
+        max-width: 70%;
+    }
+}

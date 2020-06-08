@@ -1,0 +1,13 @@
+.blue-band {
+    padding: 20rem 0;
+    width: 100%;
+
+    @include phone {
+        padding: 15rem 0 15rem 0;
+    }
+    &__background {
+        position: relative;
+        background-color: $color-brand-light;
+    }
+
+}
