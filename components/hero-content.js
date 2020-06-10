@@ -38,7 +38,11 @@ const HeroContent = ({
             <h1 className="heading-1">{ title }</h1>
             <h6 className="heading-6--caps">{ subtitle }</h6>
             <h5 className="heading-5 hero-content__paragraph">{paragraph}</h5>
-            <Button text={buttonText} />
+            {
+              buttonText && (
+                <Button text={buttonText} />
+              )
+            }
           </div>
         )
       }

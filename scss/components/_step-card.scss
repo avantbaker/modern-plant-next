@@ -1,0 +1,46 @@
+.step-card {
+    display: flex;
+    margin-bottom: 8rem;
+
+    @include phone {
+        flex-direction: column-reverse;
+    }
+
+    &:nth-of-type(even) {
+        flex-direction: row-reverse;
+        @include phone {
+            flex-direction: column-reverse;
+        }
+    }
+    &__content-container {
+        flex: 3;
+        padding: 5rem;
+        background-color: $color-grey-light;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__box-title {
+        max-width: 40rem !important;
+    }
+
+    &__details {
+        max-width: 30rem !important;
+        text-align: center;
+    }
+    &__img {
+        flex: 2;
+        background-position: center;
+        background-size: cover;
+        background-color: $color-grey-light;
+        @include phone {
+            min-height: 30rem;
+        }
+    }
+
+}

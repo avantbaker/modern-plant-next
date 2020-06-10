@@ -1,0 +1,7 @@
+.split-section {
+    display: flex;
+    padding: 20rem 0;
+    & > * {
+        flex: 1;
+    }
+}
