@@ -2,6 +2,10 @@
     display: grid;
     grid-template-columns: 45% 55%;
 
+    @include phone {
+        display: flex;
+        flex-direction: column;
+    }
     &__image {
         background-color: gray;
         height: 24rem;
@@ -15,7 +19,7 @@
         display: flex;
         padding: 1rem 3rem;
         flex-direction: column;
-        justify-content: space-between;
+        // justify-content: space-between;
     }
     &__btn {
         min-width: 15rem;

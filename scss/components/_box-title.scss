@@ -1,11 +1,19 @@
 .box-title {
-    padding: 3rem 6rem;
+
+    width: 100%;
+    padding: 3rem 0;
+    justify-content: center;
     max-width: 80%;
     margin: 0 auto 4rem auto;
     border: 2px solid $color-brand;
     text-transform: capitalize;
-    color: $color-brand;
+    
+    display: flex;
     white-space: nowrap;
+
+    &__title {
+        color: $color-brand;
+    }
 
     @include tablet {
         max-width: 70%;

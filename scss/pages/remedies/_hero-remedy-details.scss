@@ -20,18 +20,45 @@
 }
 
 .remedy-details-hero {
+    
+    &__left {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+
+        @include phone {
+            .attributes {
+                display: none;
+            }
+        }
+    }
     &__right {
         @include desktop {
             align-items: flex-start;
             justify-content: flex-start;
             padding: 3.5rem;
         }
+        @include ipad-pro-portrait {
+            align-items: space-around;
+            justify-content: flex-start;
+            padding: 10rem 3.5rem 3.5rem 3.5rem;
+
+            .attributes-box {
+                max-width: 55rem;
+            }
+        }
     }
 }
+
 .certification {
     display: flex;
     transform: translateY(8rem);
     @include phone-short {
+        display: none;
+    }
+    @include desktop-small {
         display: none;
     }
     @include phone {

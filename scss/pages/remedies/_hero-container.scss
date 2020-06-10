@@ -1,0 +1,36 @@
+.split-hero {
+    &__remedies {
+
+        @include phone-short {
+
+            .hero-content__remedy-name__title {
+                margin-top: 8rem;
+            }
+            .hero-overlay__center-container--bottle {
+                top: 65% !important;
+                max-width: 22rem !important;
+            }
+        }
+
+        @include phone {
+            .hero-content {
+                &__remedy-name {
+                    margin-top: -8rem;
+                }
+            }
+            .hero-overlay__center-container--bottle {
+                top: 52%;
+                max-width: 19rem;
+            }
+        }
+        @include phone-landscape {
+            .hero-content__remedy-name {
+                margin-top: 10rem;
+            }
+            .hero-overlay__center-container--bottle {
+                max-width: 13rem;
+            }
+            flex: 0 1 50% !important;
+        }
+    }
+}

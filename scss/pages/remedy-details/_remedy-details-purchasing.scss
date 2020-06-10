@@ -1,0 +1,25 @@
+.remedy-details-purchasing {
+    display: flex;
+    padding: 20rem 0 12rem 0;
+
+    @include desktop {
+        flex-direction: column;
+    }
+
+    .product-gallery {
+        margin-right: 3rem;
+
+        @include desktop {
+            margin-right: 0;
+        }
+    }
+
+    .product-details {
+        margin-left: 3rem;
+
+        @include desktop {
+            margin-left: 0;
+        }
+
+    }
+}

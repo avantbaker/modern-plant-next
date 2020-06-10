@@ -6,7 +6,7 @@
     @include tablet {
         &__card {
             margin-bottom: 4rem;
-            padding: 0 3rem;
+            padding: 0;
         }
     }
     @include desktop-above {

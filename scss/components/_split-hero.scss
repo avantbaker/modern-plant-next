@@ -16,6 +16,8 @@
     &__left {
         flex: 0 1 50%;
         background-color: $color-grey-light;
+        position: relative;
+
         @include desktop {
             flex: 0 1 50%;
         }
@@ -29,7 +31,7 @@
             flex: 1 1 50%;
         }
         @include phone-landscape {
-            flex: 0 0 100%;
+            flex: 0 1 50%;
         }
     }
 }

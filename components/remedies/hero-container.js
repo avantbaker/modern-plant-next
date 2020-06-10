@@ -26,7 +26,7 @@ let remedies = [
 let components = [
     ...remedies.map(({ title, color, slug }, i) => (
         <SplitHero
-          className='section'
+          className='section split-hero__remedies'
           key={i}
           overlay={<RemediesHeroOverlay slug={slug} />}
           contentLeft={<RemediesHeroContentLeft 

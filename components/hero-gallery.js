@@ -1,6 +1,5 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import GalleryControls from './gallery-controls'
 
 export default function HeroGallery({
     slides = [],
@@ -23,10 +22,10 @@ export default function HeroGallery({
             <div className="hero-gallery__content-wrapper">
                 <div className="hero-gallery__content">
                     {content}
-                    <div className="hero-gallery__controls-wrapper">
-                        <FontAwesomeIcon className="hero-gallery__icon" icon={faChevronLeft} />
-                        <FontAwesomeIcon className="hero-gallery__icon" icon={faChevronRight} />
-                    </div>
+                    <GalleryControls 
+                        className="hero-gallery__controls-wrapper"
+                        iconClass="hero-gallery__icon"
+                    />
                 </div>
             </div>
         </div>

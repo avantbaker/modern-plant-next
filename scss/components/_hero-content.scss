@@ -69,10 +69,6 @@
             width: 100%;
         }
 
-        @include phone-short {
-            display: none
-        }
-
         @include desktop {
             padding-left: 0;
 
@@ -85,6 +81,14 @@
             }
         }
 
+        @include phone-short {
+            display: none
+        }
+
+        @include phone {
+            padding: 0 3.5rem 3.5rem 3.5rem; 
+        }
+
     }
 
     &__remedy-name {
@@ -93,6 +97,9 @@
         padding-right: 20%;
 
         &__title {
+            @include phone {
+                word-spacing: 99999px;
+            }
             max-width: 90%;
             text-align: right;
         }
@@ -122,6 +129,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        z-index: 5;
 
         &--bottle {
             top: 53%;

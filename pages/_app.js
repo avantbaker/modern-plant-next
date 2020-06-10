@@ -28,19 +28,22 @@ export default class App extends NextApp {
   render() {
     const { Component, pageProps, router } = this.props;
     let className;
+
     if (router.route === '/remedies' || router.route.includes('remedies')) {
       className = 'header--light'
     }
+
     return (
       <div className='app-container'>
         <CacheProvider value={cache}>
           <Header className={className} />
-          <PageTransition timeout={300} classNames="page-transition">
+          <PageTransition timeout={900} classNames="page-transition">
             <Component {...pageProps} key={router.route} />
           </PageTransition>
           <Footer />
         </CacheProvider>
       </div>
     );
+    
   }
 }
