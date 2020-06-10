@@ -1,0 +1,17 @@
+.subscriptions-blue-band {
+    padding: 5rem 0 10rem 0;
+
+    .section-content {
+        &__content {
+            @include tablet {
+                padding-bottom: 2rem;
+            }
+        }
+    }
+    &__img {
+        transform: translate(10rem, 5rem);
+        @include tablet {
+            width: 70%;
+        }
+    }
+}

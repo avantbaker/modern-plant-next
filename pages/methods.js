@@ -5,6 +5,7 @@ import MethodsInfoContainer from '../components/methods/methods-info';
 import MethodsSubscriptionCards from '../components/methods/methods-subscription-cards';
 import MethodsCalloutContainer from '../components/methods/methods-callout-container'
 import MethodsStepCardsContainer from '../components/methods/methods-step-cards-container';
+import FluidGallerySection from '../components/fluid-gallery-section';
 
 export default function Methods() {
   return (
@@ -18,6 +19,7 @@ export default function Methods() {
         <MethodsSubscriptionCards />
         <MethodsCalloutContainer />
         <MethodsStepCardsContainer />
+        <FluidGallerySection />
       </div>
     </Fragment>
   );

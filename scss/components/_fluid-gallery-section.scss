@@ -1,0 +1,41 @@
+.fluid-gallery-section {
+    display: flex;
+    flex-direction: column;
+
+    &__wrapper {
+        padding: 25rem 0;
+        position: relative;
+    }
+    &__slides {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: $color-grey-light;
+    }
+
+    &__slide {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    &__img {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    &__controls-container {
+        display: flex;
+        justify-content: flex-end;
+        padding: 2.5rem;
+    }
+}

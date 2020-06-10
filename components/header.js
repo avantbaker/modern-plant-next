@@ -21,8 +21,8 @@ export default function Header({
                     <Link href="/methods">
                         <a className="header__link paragraph" href="#">Methods</a>
                     </Link>
-                    <Link href="/subscription">
-                        <a className="header__link paragraph" href="#">Subscription</a>
+                    <Link href="/subscriptions">
+                        <a className="header__link paragraph" href="#">Subscriptions</a>
                     </Link>
                     <Link href="/about">
                         <a className="header__link paragraph" href="#">About</a>

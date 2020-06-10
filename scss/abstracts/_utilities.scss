@@ -65,3 +65,14 @@
 .text-color-tertiary {
     color: $color-tertiary !important;
 }
+
+.text-color-brand {
+    color: $color-brand !important;
+}
+.text-color-brand--dark {
+    color: $color-brand-dark !important;
+}
+
+.text-uppercase {
+    text-transform: uppercase !important;
+}
