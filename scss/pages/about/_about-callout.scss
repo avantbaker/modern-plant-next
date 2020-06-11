@@ -1,0 +1,42 @@
+.about-callout {
+    padding: 15rem 0;
+    display: flex;
+
+    @include desktop {
+        padding-top: 5rem;
+    }
+    @include desktop-below {
+        flex-direction: column;
+    }
+
+    &__section {
+        flex: 1;
+        @include aspect-ratio(1,1);
+    }
+    &__left {
+        .about-callout__content {
+            background-position: center;
+            background-size: cover;
+        }
+    }
+    &__right {
+        .about-callout__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: $color-brand-light;
+        }
+    }
+
+    &__caption {
+        max-width: 80%;
+        color: $color-brand;
+    }
+    &__box-title {
+        @include phone {
+            max-width: 90%;
+        }
+    }
+}

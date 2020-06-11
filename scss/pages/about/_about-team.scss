@@ -1,0 +1,67 @@
+.about-team {
+    padding-bottom: 20rem;
+
+    &__cards {
+        display: grid;
+        grid-gap: 8rem;
+        grid-template-columns: repeat(4, calc(40% - 40px));
+        grid-template-rows: auto;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        margin-right: -18rem;
+    }
+
+}
+
+.team-card {
+    display: flex;
+    
+    &__left {
+        flex: .8;
+    }
+    &__right {
+        flex: 2;
+        transform: translateX(3rem);
+    }
+
+    &__image-wrapper {
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        background-color: black;
+        background-position: center;
+        background-size: center;
+    }
+}
+
+.about-partners {
+    padding: 10rem 0;
+    
+    &__logos {
+        display: flex;
+        @include tablet {
+            flex-direction: column;
+        }
+    }
+    &__logo-container {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5rem;
+
+        &:first-of-type {
+            justify-content: flex-start;
+            @include tablet {
+                justify-content: center;
+            }
+
+        }
+        &:last-of-type {
+            justify-content: flex-end;
+            @include tablet {
+                justify-content: center;
+            }
+        }
+    }
+}

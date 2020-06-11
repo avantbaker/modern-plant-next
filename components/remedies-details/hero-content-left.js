@@ -5,7 +5,7 @@ import Attributes from '../attributes';
 
 const slides = [
   {
-    src: '/remedies/shaded-man.png'
+    src: '/images/remedies/shaded-man.png?webp'
   }
 ];
 

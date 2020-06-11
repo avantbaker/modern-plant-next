@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from '../button';
 import BlogCard from '../blog-card';
+const leavesonbottle = require('../../public/images/global/leavesonbottle.png?webp');
 
 export default function BlogSlider() {
     return (
@@ -12,7 +13,7 @@ export default function BlogSlider() {
                         {
                             new Array(6).fill(null).map(() => 
                                 <BlogCard 
-                                    backgroundImg={'global/leavesonbottle.png'}
+                                    backgroundImg={leavesonbottle}
                                     subtitle={'Fortune Magazine'}
                                     date={'MAY 10, 2020'}
                                     title={'Plants with a plant. A terpene supplement brand.'}

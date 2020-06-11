@@ -10,7 +10,7 @@ export default function Header({
         <div id="header" className={`header ${className}`}>
             <div className="header__logo-wrapper">
                 <Link href="/">
-                    <img src="/global/logo-horizontal-black.png" alt="Logo Horizontal Black" className="header__logo"/>
+                    <img src="/images/global/logo-horizontal-black.png?webp" alt="Logo Horizontal Black" className="header__logo"/>
                 </Link>
             </div>
             <div className="header__navigation">

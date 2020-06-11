@@ -13,7 +13,7 @@ export default function RemediesHeroContentRight({
             <div className='hero-content__remedy-details'>
               <div className='hero-content__remedy-details__logo-container'>
                 <img
-                  src='global/mp-logo-mark-white.png'
+                  src='/images/global/mp-logo-mark-white.png?webp'
                   alt='White Mark Logo'
                   className='hero-content__remedy-details__logo'
                 />

@@ -1,9 +1,10 @@
 import React from 'react'
 import Button from '../button';
+const bottles = require('../../public/images/home/bottles.png?webp');
 
 export default function BackgroundCalloutContainer() {
     return (
-        <div className='background-section row' style={{ backgroundImage: `url(${'home/bottles.png' })` }}>
+        <div className='background-section row' style={{ backgroundImage: `url(${bottles})` }}>
           <div className="background-section__overlay"></div>
           <div className='background-section__container col-xs-12 col-sm-offset-6 col-md-offset-7'>
             <div className='background-section__content'>

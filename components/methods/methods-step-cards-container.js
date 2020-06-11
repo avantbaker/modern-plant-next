@@ -4,22 +4,22 @@ const stepData = [
     {
         title: 'Upload DNA',
         details: 'Upload your Diagnomics DNA data to your personal, secure Modern Plant Profile',
-        imageSrc: '/methods/2-small-bottles.png'
+        imageSrc: '/images/methods/2-small-bottles.png?webp'
     },
     {
         title: 'Genetic Sequencing',
         details: 'Our labs recieve your DNA and sequence it for genetic screening and plant-based matchmaking. We find out what your body is asking for.',
-        imageSrc: '/methods/test-viles.png'
+        imageSrc: '/images/methods/test-viles.png?webp'
     },
     {
         title: 'Genetic Reporting',
         details: 'Your genetics report is uploaded to your Modern Plant personal profile for your review',
-        imageSrc: '/methods/envelopes.png'
+        imageSrc: '/images/methods/envelopes.png?webp'
     },
     {
         title: 'Your Subscriptions',
         details: 'Begin your journey to preventative wellness. Start your subscription to gain access to virtual doctors and receive monthy perscriptions of compatible, plant-based blends.',
-        imageSrc: '/methods/boxes.png'
+        imageSrc: '/images/methods/boxes.png?webp'
     },
 ]
 

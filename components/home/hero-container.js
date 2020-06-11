@@ -1,12 +1,13 @@
 import React from 'react'
-import SplitHero from '../split-hero';
-import HeroContent from '../hero-content';
-import HeroBackground from '../hero-background';
+import SplitHero from '@components/split-hero';
+import HeroContent from '@components/hero-content';
+import HeroBackground from '@components/hero-background';
+const curology = require('@images/global/curology.png?webp');
 
 export default function HomeHeroContainer() {
     return (
         <SplitHero
-          contentLeft={<HeroBackground src="/global/curology.png" />}
+          contentLeft={<HeroBackground src={curology} />}
           contentRight={
             <HeroContent
               title='Terpene Remedies'

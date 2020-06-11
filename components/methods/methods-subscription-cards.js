@@ -2,7 +2,7 @@ import SubscriptionCard from '../subscription-card';
 
 const cardData = [
     {
-        imageSrc: '/global/greenbottle.png',
+        imageSrc: '/images/global/greenbottle.png?webp',
         title: 'Lorem ipsum dolor',
         info: 'Upload your Diagnomics DNA Data.. Lorem ipsum dolor sit amet, consectetur adipiscing',
         price: 'Free',
@@ -10,7 +10,7 @@ const cardData = [
         buttonText: 'Add to Cart'
     },
     {
-        imageSrc: '/global/boxlove.png',
+        imageSrc: '/images/global/boxlove.png?webp',
         title: 'Lorem ipsum dolor',
         info: 'Upload your Diagnomics DNA Data.. Lorem ipsum dolor sit amet, consectetur adipiscing',
         price: 'Free',
@@ -18,7 +18,7 @@ const cardData = [
         buttonText: 'Add to Cart'
     },
     {
-        imageSrc: '/global/milk.png',
+        imageSrc: '/images/global/milk.png?webp',
         title: 'Lorem ipsum dolor',
         info: 'Upload your Diagnomics DNA Data.. Lorem ipsum dolor sit amet, consectetur adipiscing',
         price: '$150',

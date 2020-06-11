@@ -6,7 +6,7 @@ import HeroContent from '../hero-content';
 export default function MethodsHeroContainer() {
     return (
         <SplitHero
-          contentLeft={<HeroBackground src='/methods/plants-in-beaker.png' />}
+          contentLeft={<HeroBackground src='/images/methods/plants-in-beaker.png?webp' />}
           contentRight={
             <HeroContent
               title='Modern Methods'

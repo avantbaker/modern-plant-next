@@ -22,7 +22,7 @@ export default function RemedyDetailsPurchasingContainer() {
           when you subscribe to your wellness box.
         </div>
         <div className="mb-xxl">
-            <a href='#' class='paragraph--small-underlined'>
+            <a href='#' className='paragraph--small-underlined'>
             Learn more about our subscription boxes.
             </a>
         </div>

@@ -6,7 +6,7 @@ const FluidGallerySection = () => {
       <div className="fluid-gallery-section__wrapper">
         <div className="fluid-gallery-section__slides container-fluid">
           <div className="fluid-gallery-section__slide">
-            <img className="fluid-gallery-section__img img-responsive" src="/home/aesterbay.png" alt="aesterbay"/>
+            <img className="fluid-gallery-section__img img-responsive" src="/images/home/aesterbay.png?webp" alt="aesterbay"/>
           </div>
         </div>
       </div>
