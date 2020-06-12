@@ -6,7 +6,7 @@ import HeroBackground from '@components/hero-background';
 export default function HomeHeroContainer() {
     return (
         <SplitHero
-          contentLeft={<HeroBackground src={require('@images/global/curology.png?webp')} />}
+          contentLeft={<HeroBackground src={require('@images/global/curology.png')} />}
           contentRight={
             <HeroContent
               title='Terpene Remedies'

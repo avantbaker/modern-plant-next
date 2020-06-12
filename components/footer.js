@@ -56,10 +56,10 @@ export default function Footer({
                         <div className="footer__terms heading-6">Privacy | Terms</div>
                         <div className="footer__logo-wrapper">
                             {/* <div className="footer__logo">
-                                <img className="footer__img footer__img--mark" src="/images/global/mp-logo-mark-black.png?webp" alt="Modern Plant Logo Mark"/>
+                                <img className="footer__img footer__img--mark" src="/images/global/mp-logo-mark-black.png" alt="Modern Plant Logo Mark"/>
                             </div> */}
                             <div className="footer__logo">
-                                <img className="footer__img footer__img--type" src="/images/global/mp-logo-type-black.png?webp" alt="Modern Plant Logo Type"/>
+                                <img className="footer__img footer__img--type" src="/images/global/mp-logo-type-black.png" alt="Modern Plant Logo Type"/>
                             </div>
                         </div>
                         <div className="footer__copyright paragraph">Copyright</div>

@@ -1,27 +1,53 @@
 .blog-card {
-    display: grid;
-    grid-template-columns: 45% 55%;
+    display: flex;
+    margin-right: 3.5rem;
+    flex-shrink: 0;
 
     @include phone {
         display: flex;
         flex-direction: column;
+        max-width: 100%;
+        flex-shrink: 1;
     }
+
     &__image {
         background-color: gray;
         height: 24rem;
+        width: 100%;
         background-position: center;
         background-size: cover;
-        img {
-            width: 100%;
-        }
     }
+
     &__content {
         display: flex;
+        flex-wrap: wrap;
         padding: 1rem 3rem;
         flex-direction: column;
-        // justify-content: space-between;
+        justify-content: space-between;
+        @include phone {
+            padding-left: 1rem;
+            min-width: 31rem;
+        }
     }
+
+    &__info {
+        @include phone {
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    &__title {
+        @include phone {
+            margin-bottom: 1.5rem;
+        }
+    }
+
     &__btn {
         min-width: 15rem;
     }
+
+    &:first-of-type {
+        margin-left: 10%;
+    }
+
 }

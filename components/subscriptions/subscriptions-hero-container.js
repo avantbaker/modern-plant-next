@@ -6,7 +6,7 @@ import HeroContent from '../hero-content';
 export default function MethodsHeroContainer() {
     return (
         <SplitHero
-          contentLeft={<HeroBackground src='/images/subscriptions/curology-girl.png?webp' />}
+          contentLeft={<HeroBackground src='/images/subscriptions/curology-girl.png' />}
           contentRight={
             <HeroContent
               title='Regular Wellness'

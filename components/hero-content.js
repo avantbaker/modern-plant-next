@@ -32,7 +32,7 @@ const HeroContent = ({
             <div className="hero-content__background">{
               showBackground &&
               <div className="hero-content__fingerprint">
-                <img className="responsive-img" src="/images/global/fingerprint-grey.png?webp" alt=""/>
+                <img className="responsive-img" src="/images/global/fingerprint-grey.png" alt=""/>
               </div>
             }</div>
             <h1 className="heading-1">{ title }</h1>

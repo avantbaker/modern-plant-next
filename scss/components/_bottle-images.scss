@@ -18,8 +18,9 @@
             }
             @include desktop-below {
                 top: -18rem;
+                width: 14rem;
                 img {
-                    transform: rotate(-65deg) 
+                    transform: rotate(-45deg) translateX(15%) translateY(15%);
                 }
             }
         }

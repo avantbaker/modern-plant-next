@@ -3,7 +3,7 @@ import Button from '../button';
 
 export default function BackgroundCalloutContainer() {
     return (
-        <div className='background-section row' style={{ backgroundImage: `url(${require('../../public/images/home/bottles.png?webp')})` }}>
+        <div className='background-section row' style={{ backgroundImage: `url(${require('../../public/images/home/bottles.png')})` }}>
           <div className="background-section__overlay"></div>
           <div className='background-section__container col-xs-12 col-sm-offset-6 col-md-offset-7'>
             <div className='background-section__content'>

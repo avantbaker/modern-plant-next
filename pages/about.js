@@ -16,14 +16,14 @@ export default function Subscriptions() {
       </Head>
       <div className='page-container'>
         <SplitHero
-          contentLeft={<HeroBackground src='/images/about/sink.png?webp' />}
+          contentLeft={<HeroBackground src='/images/about/sink.png' />}
           contentRight={<HeroContent title='Bold Purveyors of Wellness' />}
         />
         <div className='about-callout container _80'>
           <div className='about-callout__section about-callout__left'>
             <div
               className='about-callout__content content'
-              style={{ backgroundImage: `url(/images/about/flowersinvase.png?webp)` }}
+              style={{ backgroundImage: `url(/images/about/flowersinvase.png)` }}
             />
           </div>
           <div className='about-callout__section about-callout__right'>
@@ -40,7 +40,7 @@ export default function Subscriptions() {
             <div className="about-team__cards scrollable-cards">
                 <div className="about-team__card team-card scrollable-cards__card">
                     <div className="team-card__left">
-                        <div className="team-card__image-wrapper" style={{ backgroundImage: `url(/images/global/apothecary.png?webp)` }} />
+                        <div className="team-card__image-wrapper" style={{ backgroundImage: `url(/images/global/apothecary.png)` }} />
                     </div>
                     <div className="team-card__right">
                         <div className="heading-5 mb-sm">John Smith</div>
@@ -50,7 +50,7 @@ export default function Subscriptions() {
                 </div>
                 <div className="about-team__card team-card scrollable-cards__card">
                     <div className="team-card__left">
-                        <div className="team-card__image-wrapper" style={{ backgroundImage: `url(/images/global/apothecary.png?webp)` }} />
+                        <div className="team-card__image-wrapper" style={{ backgroundImage: `url(/images/global/apothecary.png)` }} />
                     </div>
                     <div className="team-card__right">
                         <div className="heading-5 mb-sm">John Smith</div>
@@ -60,7 +60,7 @@ export default function Subscriptions() {
                 </div>
                 <div className="about-team__card team-card scrollable-cards__card">
                     <div className="team-card__left">
-                        <div className="team-card__image-wrapper" style={{ backgroundImage: `url(/images/global/apothecary.png?webp)` }} />
+                        <div className="team-card__image-wrapper" style={{ backgroundImage: `url(/images/global/apothecary.png)` }} />
                     </div>
                     <div className="team-card__right">
                         <div className="heading-5 mb-sm">John Smith</div>
@@ -70,7 +70,7 @@ export default function Subscriptions() {
                 </div>
                 <div className="about-team__card team-card scrollable-cards__card">
                     <div className="team-card__left">
-                        <div className="team-card__image-wrapper" style={{ backgroundImage: `url(/images/global/apothecary.png?webp)` }} />
+                        <div className="team-card__image-wrapper" style={{ backgroundImage: `url(/images/global/apothecary.png)` }} />
                     </div>
                     <div className="team-card__right">
                         <div className="heading-5 mb-sm">John Smith</div>
@@ -92,13 +92,13 @@ export default function Subscriptions() {
             <div className="about-partners__title heading-3 mb-xxl">Our Partners</div>
             <div className="about-partners__logos">
                 <div className="about-partners__logo-container">
-                    <img src="/images/about/partner2.png?webp" alt="" className="about-partners__logo img-responsive"/>
+                    <img src="/images/about/partner2.png" alt="" className="about-partners__logo img-responsive"/>
                 </div>
                 <div className="about-partners__logo-container">
-                    <img src="/images/about/partner3.png?webp" alt="" className="about-partners__logo img-responsive"/>
+                    <img src="/images/about/partner3.png" alt="" className="about-partners__logo img-responsive"/>
                 </div>
                 <div className="about-partners__logo-container">
-                    <img src="/images/about/partner1.png?webp" alt="" className="about-partners__logo img-responsive"/>
+                    <img src="/images/about/partner1.png" alt="" className="about-partners__logo img-responsive"/>
                 </div>
             </div>
         </div>

@@ -19,7 +19,7 @@ function SectionContent({
           <div className='section-content__stamp'>
             <img
               className='section-content__stamp-img'
-              src='/images/global/stamp-black.png?webp'
+              src='/images/global/stamp-black.png'
               alt='Black Stamp'
             />
           </div>

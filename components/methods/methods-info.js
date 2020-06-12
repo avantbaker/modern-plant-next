@@ -33,7 +33,7 @@ export default function MethodsInfoSection() {
             </div>
           }
           contentRight={
-            <div className='methods-info__right' style={{backgroundImage: `url(/images/global/fingerprint-grey.png?webp)`}}>
+            <div className='methods-info__right' style={{backgroundImage: `url(/images/global/fingerprint-grey.png)`}}>
               <BoxTitle text='The power of plants' />
               <div className='methods-info__subtext heading-6--caps'>combined with</div>
               <BoxTitle text='The power of Dna' />

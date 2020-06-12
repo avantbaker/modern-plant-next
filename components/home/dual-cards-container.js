@@ -9,7 +9,7 @@ export default function DualCardsContainer() {
                 <BigCard 
                     subtitle={'Learn About Our Methods'}
                     title={'Modern Methods'}
-                    src={require('../../public/images/home/science.png?webp')}
+                    src={require('../../public/images/home/science.png')}
                     linkText={'Process'}
                 />
               </div>
@@ -17,7 +17,7 @@ export default function DualCardsContainer() {
                 <BigCard 
                     subtitle={'Browse our terpene suplements'}
                     title={'Refined Remedies'}
-                    src={require('../../public/images/home/aesterbay.png?webp')}
+                    src={require('../../public/images/home/aesterbay.png')}
                     linkText={'Producs'}
                 />
               </div>

@@ -5,15 +5,28 @@
     .row {
         flex-direction: column;
     }
-
-    &__wrapper {
-        display: grid;
-        grid-gap: 10px;
-        grid-template-columns: repeat(6, calc(55% - 40px));
-        grid-template-rows: auto;
-        overflow-x: scroll;
-        overflow-y: hidden;
-        margin-right: -18rem;
+    .container-fluid {
+        padding: 0;
+        margin-right: 15rem;
     }
 
+    &__wrapper {
+        // display: grid;
+        // grid-gap: 10px;
+        // grid-template-columns: repeat(6, calc(55% - 40px));
+        // grid-template-rows: auto;
+        // overflow-x: scroll;
+        // overflow-y: hidden;
+        // margin-right: -18rem;
+        display: flex;
+        overflow-x: scroll;
+        width: 100%;
+        
+    }
+
+    .spacer {
+        color: white;
+        width: 20%;
+        height: 100%;
+    }
 }

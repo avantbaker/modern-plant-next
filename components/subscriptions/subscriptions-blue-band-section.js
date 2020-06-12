@@ -19,7 +19,7 @@ export default function SubscriptionsBlueBandSection() {
             />
           </div>
           <div className='col-md-6 relative w-100'>
-              <img src="/images/subscriptions/pieceofcake.png?webp" alt="" className="subscriptions-blue-band__img"/>
+              <img src="/images/subscriptions/pieceofcake.png" alt="" className="subscriptions-blue-band__img"/>
           </div>
         </div>
       </div>
