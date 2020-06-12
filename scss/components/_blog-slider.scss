@@ -11,17 +11,9 @@
     }
 
     &__wrapper {
-        // display: grid;
-        // grid-gap: 10px;
-        // grid-template-columns: repeat(6, calc(55% - 40px));
-        // grid-template-rows: auto;
-        // overflow-x: scroll;
-        // overflow-y: hidden;
-        // margin-right: -18rem;
         display: flex;
         overflow-x: scroll;
         width: 100%;
-        
     }
 
     .spacer {

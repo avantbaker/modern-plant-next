@@ -1,6 +1,6 @@
-import TeamCard from '@components/team-card';
+import TestimonialCard from '@components/testimonial-card'
 
-const teamMembers = [
+const testimonials = [
   {
     imageSrc: '/images/global/apothecary.png',
     name: 'John Smith',
@@ -27,17 +27,17 @@ const teamMembers = [
   },
 ]
 
-const AboutTeamContainer = () => {
+const AboutTestimonialsContainer = () => {
   return (
-    <div className='about-team'>
+    <div className="testimonials">
       <div className="container _80">
-        <h3 className='about-team__title heading-3 mb-xxl'>Our Team</h3>
+        <h3 className='testimonials__title heading-3'>Don't just take our word for it.</h3>
       </div>
-      <div className='about-team__cards scrollable-cards'>
-        { teamMembers.map((member, i) => <TeamCard key={i} {...member} />)}
+      <div className='testimonials__cards'>
+        { testimonials.map((testimonial, i) => <TestimonialCard key={i} {...testimonial} />)}
       </div>
     </div>
-  );
+  )
 };
 
-export default AboutTeamContainer;
+export default AboutTestimonialsContainer;

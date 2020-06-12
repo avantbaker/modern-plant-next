@@ -1,6 +1,6 @@
 import SplitHero from '@components/split-hero';
-import HeroBackground from '@components/split-hero';
-import HeroContent from '@components/split-hero';
+import HeroBackground from '@components/hero-background';
+import HeroContent from '@components/hero-content';
 
 const AboutHeroContainer = () => {
   return (
