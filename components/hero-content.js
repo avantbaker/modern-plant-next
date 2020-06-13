@@ -2,6 +2,7 @@
 import { Fragment } from 'react'
 import { jsx } from '@emotion/core'
 import Button from './button';
+import Link from 'next/link';
 
 const HeroContent = ({ 
     children, 
@@ -14,6 +15,7 @@ const HeroContent = ({
     type = null,
     content,
     backgroundColor,
+    href
 }) => {
 
   if (type) {
@@ -40,7 +42,9 @@ const HeroContent = ({
             <h5 className="heading-5 hero-content__paragraph">{paragraph}</h5>
             {
               buttonText && (
-                <Button text={buttonText} />
+                <Link href="/remedies">
+                  <Button text={buttonText} />
+                </Link>
               )
             }
           </div>

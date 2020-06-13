@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from '../button';
 import BlogCard from '../blog-card';
+import Link from 'next/link';
 const leavesonbottle = require('../../public/images/global/leavesonbottle.png');
 
 export default function BlogSlider() {
@@ -17,14 +18,16 @@ export default function BlogSlider() {
                             subtitle={'Fortune Magazine'}
                             date={'MAY 10, 2020'}
                             title={'Plants with a plant. A terpene supplement brand.'}
-                            link={'#'}
+                            link={'/news/article-title'}
                         />
                     )
                 }
                 <div className="spacer">spacer</div>
             </div>
             <div className="blog-card__all container _80">
-                <Button text="All News" className="blog-card__btn"/>
+                <Link href="/news">
+                    <Button text="All News" className="blog-card__btn"/>
+                </Link>
             </div>
         </div>
     )

@@ -11,6 +11,7 @@ export default function DualCardsContainer() {
                     title={'Modern Methods'}
                     src={require('../../public/images/home/science.png')}
                     linkText={'Process'}
+                    href="/methods"
                 />
               </div>
               <div className="dual-cards__card col-xs-12 col-md-6">
@@ -19,6 +20,7 @@ export default function DualCardsContainer() {
                     title={'Refined Remedies'}
                     src={require('../../public/images/home/aesterbay.png')}
                     linkText={'Producs'}
+                    href="/remedies"
                 />
               </div>
           </div>

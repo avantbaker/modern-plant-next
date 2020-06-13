@@ -1,0 +1,31 @@
+.news-details-content {
+    padding: 15rem 0;
+    padding-bottom: 7.5rem;
+    display: flex;
+
+    @include phone {
+        flex-direction: column;
+    }
+    &__left {
+        flex: 0 1 25%;
+        @include phone {
+            margin-bottom: 5rem;
+        }
+    }
+    &__right {
+        flex: 0 1 75%;
+    }
+
+    &__article,
+    &__title {
+        max-width: 75%;
+        @include phone {
+            max-width: 100%;
+        }
+    }
+}
+
+.news-content-footer {
+    display: flex;
+    justify-content: space-between;
+}

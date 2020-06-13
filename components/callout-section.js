@@ -1,5 +1,6 @@
 import Button from './button';
 import BoxTitle from './box-title';
+import Link from 'next/link';
 
 export default function CalloutSection({
     title = '',
@@ -13,7 +14,9 @@ export default function CalloutSection({
                 <div className="callout-section__left">
                     <div className="heading-3 mb-sm text-color-white">{title}</div>
                     <div className="heading-5 mb-xxl text-color-white">{subtitle}</div>
-                    <Button text={buttonText} type="secondary--white"/>
+                    <Link href="/methods">
+                        <Button text={buttonText} type="secondary--white"/>
+                    </Link>
                 </div>
                 <div className="callout-section__right">
                     <BoxTitle>{boxTitleText}</BoxTitle>

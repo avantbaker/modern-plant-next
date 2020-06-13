@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link';
 
 const BlogCard = ({
     backgroundImg,
@@ -16,7 +17,9 @@ const BlogCard = ({
                     <div className="blog-card__date heading-6--caps">{date}</div>
                 </div>
                 <div className="blog-card__title heading-4">{title}</div>
-                <a className="blog-card__link paragraph--small-underlined" href={link}>Read Article</a>
+                <Link href={link}>
+                    <div className="blog-card__link paragraph--small-underlined">Read Article</div>
+                </Link>
             </div>
         </div>
     )

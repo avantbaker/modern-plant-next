@@ -5,6 +5,7 @@ import { cache, injectGlobal } from 'emotion';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import { PageTransition } from 'next-page-transitions'
+import { motion, AnimatePresence } from "framer-motion"
 
 injectGlobal`
   .page-transition-enter {
