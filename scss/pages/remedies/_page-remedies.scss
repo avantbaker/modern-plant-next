@@ -1,0 +1,35 @@
+.page-remedies {
+
+    .header__logo {
+        &--black {
+            display: block !important;
+        }
+        &--white {
+            display: none !important;
+        }
+    }
+    &.header {
+        &--light {
+            .header__link {
+                color: $color-white !important;
+            }
+            .header__icon > path {
+                color: $color-white !important;
+    
+                @include phone {
+                    color: black !important;
+                }
+            }
+        }
+    }
+
+    @include phone {
+        padding-top: 13rem;
+        &.header {
+            padding-top: 0;
+        }
+        .fullpage-footer {
+            display: none;
+        }
+    }
+}

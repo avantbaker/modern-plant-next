@@ -17,15 +17,10 @@
     &__left {
         flex: 1 1 50%;
         min-height: 50vh;
-        background-color: $color-grey-light;
         position: relative;
 
         @include desktop {
             flex: 1 1 50%;
-            min-height: 60vh;
-        }
-        @include phone {
-            min-height: 55vh;
         }
     }
     &__right {

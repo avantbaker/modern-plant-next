@@ -6,7 +6,7 @@ import RemediesDetailsCalloutContainer from '../../components/remedies-details/r
 
 export default function Remedy() {
   return (
-    <Page title='Remedy'>
+    <Page title='Remedy Details'>
       <RemedyDetailsHeroContainer />
       <RemedyDetailsPurchasingContainer />
       <RemediesDetailsCalloutContainer

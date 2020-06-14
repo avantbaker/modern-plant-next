@@ -1,0 +1,30 @@
+.page-remedy-details {
+
+    &.header {
+        &--light {
+            .header__link {
+                color: $color-white !important;
+            }
+            .header__icon > path {
+                color: $color-white !important;
+    
+                @include phone {
+                    color: black !important;
+                }
+            }
+        }
+    }
+
+    
+    @include phone {
+        .split-hero__left {
+            flex: 0 1 60vh;
+
+            .hero-gallery-content__title {
+                margin-bottom: 0 !important;
+                line-height: calc(100vh / 11);
+                font-size: calc(100vh / 11);
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.page-contact {
+    &.header {
+        .header__logo {
+            &--white {
+                display: block;
+            }
+            &--black {
+                display: none;
+            }
+        }
+        .header__icon > path {
+            @include phone {
+                color: white;
+            }
+        }
+    }
+}

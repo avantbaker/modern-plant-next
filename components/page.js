@@ -5,13 +5,14 @@ import { jsx } from '@emotion/core';
 import { motion } from 'framer-motion';
 
 const Page = ({ title = '', children }) => {
+  const className = title.toLowerCase().split(" ").join("-");
   return (
     <Fragment>
       <Head>
         <title>Modern Plant - {title}</title>
       </Head>
       <motion.div
-        className='page-container'
+        className={`page-container page-${className}`}
         exit={{ opacity: 0 }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

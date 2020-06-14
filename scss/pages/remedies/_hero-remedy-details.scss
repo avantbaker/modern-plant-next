@@ -54,15 +54,12 @@
 
 .certification {
     display: flex;
-    transform: translateY(8rem);
+    padding-top: 8rem;
     @include phone-short {
         display: none;
     }
     @include desktop-small {
         display: none;
-    }
-    @include phone {
-        transform: translateY(8rem);
     }
     &__item {
         height: 6rem;

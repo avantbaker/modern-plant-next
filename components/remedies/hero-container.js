@@ -38,7 +38,7 @@ let components = [
           />}
         />
     )),
-    <Footer key={'ahha'} className="section fp-auto-height" />
+    <Footer key={'footer'} className="section fp-auto-height fullpage-footer" />
 ];
 
 export default function RemediesHeroContainer() {

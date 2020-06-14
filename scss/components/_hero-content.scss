@@ -5,14 +5,11 @@
     height: 100%;
 
     &--remedies {
-        @include desktop {
-            margin-top: -8rem;
-        }
-        @include tablet {
-            margin-top: -3rem;
+        justify-content: flex-end;
+        @include phone {
+            justify-content: center;
         }
     }
-    
     &__content {
 
         margin-top: 10rem;
@@ -22,7 +19,9 @@
         @include tablet {
             margin-top: 2rem;
         }
-
+        @include phone {
+            padding-top: 4rem;
+        }
         & >:not(:last-child) {
             margin-bottom: 2rem;
         }
@@ -55,9 +54,9 @@
     &__remedy-details {
         position: relative;
         display: flex;
-        // justify-content: center;
-        // align-items: center;
-        // flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         padding-bottom: 10rem;
         padding-left: 8rem;
 
@@ -88,6 +87,7 @@
 
         @include phone {
             padding: 0 3.5rem 3.5rem 3.5rem; 
+            flex-direction: row;
         }
 
     }
@@ -95,26 +95,25 @@
     &__remedy-name {
         display: flex; 
         justify-content: flex-end;
+        align-items: flex-end;
         padding-right: 20%;
-
-        &__title {
-            @include phone {
-                word-spacing: 99999px;
-            }
-            max-width: 90%;
-            text-align: right;
-        }
+        text-align: right;
+        max-width: 70%;
 
         @include desktop {
             padding-right: 0;
             justify-content: center;
-            
-            &__title {
-                max-width: 100%;
-                text-align: center;
-            }
         }
 
+        @include phone {
+            max-width: 50%;
+            text-align: center;
+            &__title {
+                margin-top: -60%;
+                line-height: calc(100vh / 9.5);
+                font-size: calc(100vh / 9.5);
+            }
+        }
     }
 } 
 
@@ -135,11 +134,13 @@
         &--bottle {
             top: 53%;
             max-width: 18rem;
+        }
 
-            @include phone-short {
-                top: 60%;
+        @include phone {
+            &--bottle {
+                top: 58%;
+                max-width: calc(100vh / 5);
             }
-    
         }
     }
 

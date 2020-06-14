@@ -4,36 +4,41 @@ import { CacheProvider } from '@emotion/core';
 import { cache, injectGlobal } from 'emotion';
 import Header from '../components/header';
 import Footer from '../components/footer';
-import { PageTransition } from 'next-page-transitions'
-import { motion, AnimatePresence } from "framer-motion"
+import { AnimatePresence } from "framer-motion"
 
 injectGlobal`
-  .page-transition-enter {
-    opacity: 0;
-  }
-  .page-transition-enter-active {
-    opacity: 1;
-    transition: opacity 800ms;
-  }
-  .page-transition-exit {
-    opacity: 1;
-  }
-  .page-transition-exit-active {
-    opacity: 0;
-    transition: opacity 800ms;
-  }
   ${require('../scss/main.scss')}
 `;
 
 export default class App extends NextApp {
+
   render() {
+
     const { Component, pageProps, router } = this.props;
     let className;
+    const isRemedies = router.route === '/remedies';
+    const isRemediesDetails = router.route.includes('remedies');
+    const isContact = router.route === '/contact';
 
-    if (router.route === '/remedies' || router.route.includes('remedies')) {
-      className = 'header--light'
-    }
+    const isLightRoute = (isRemedies || router.route.includes('remedies')) ||
+    router.route === '/' || 
+    router.route === '/subscriptions' || 
+    router.route === '/contact' ||
+    router.route === '/about';
     
+    if (isLightRoute) {
+      className = 'header--light'
+      if (isRemedies) {
+        className = className + ' page-remedies';
+      }
+      if (isRemediesDetails) {
+        className = className + ' page-remedy-details';
+      }
+      if (isContact) {
+        className = className + ' page-contact';
+      }
+    }
+  
     if (router.route === '/mobile-navigation') {
       className = 'mobile-nav'
     }
@@ -42,9 +47,6 @@ export default class App extends NextApp {
       <div className='app-container'>
         <CacheProvider value={cache}>
           <Header className={className} />
-          {/* <PageTransition timeout={900} classNames="page-transition">
-            
-          </PageTransition> */}
           <AnimatePresence exitBeforeEnter>
             <Component {...pageProps} key={router.route} />
           </AnimatePresence>

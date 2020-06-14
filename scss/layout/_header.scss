@@ -13,6 +13,9 @@
 
     &__logo {
         width: 100%;
+        &--white {
+            display: none;
+        }
     }
 
     &__navigation {
@@ -69,16 +72,16 @@
     }
 
     &--light {
-        .header__link {
-            color: $color-white !important;
-        }
-        .header__icon > path {
-            color: $color-white !important;
+        // .header__link {
+        //     color: $color-white !important;
+        // }
+        // .header__icon > path {
+        //     color: $color-white !important;
 
-            @include phone {
-                color: black !important;
-            }
-        }
+        //     @include phone {
+        //         color: black !important;
+        //     }
+        // }
     }
 
 }

@@ -1,41 +1,4 @@
 .split-hero {
     &__remedies {
-
-        @include phone-short {
-
-            .hero-content__remedy-name__title {
-                margin-top: 5rem;
-            }
-            .hero-overlay__center-container--bottle {
-                top: 62% !important;
-                max-width: 14rem !important;
-            }
-        }
-
-        @include phone {
-            .hero-content {
-                &__remedy-name {
-                    margin-top: 2rem;
-                }
-            }
-            .hero-overlay__center-container--bottle {
-                top: 62%;
-                max-width: 16rem;
-            }
-
-            .attributes-box {
-                display: none;
-            }
-        }
-
-        @include phone-landscape {
-            .hero-content__remedy-name {
-                margin-top: 10rem;
-            }
-            .hero-overlay__center-container--bottle {
-                max-width: 13rem;
-            }
-            flex: 0 1 50% !important;
-        }
     }
 }

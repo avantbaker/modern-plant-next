@@ -12,7 +12,14 @@ export default function Header({ className = '' }) {
           <img
             src='/images/global/logo-horizontal-black.png'
             alt='Logo Horizontal Black'
-            className='header__logo'
+            className='header__logo header__logo--black'
+          />
+        </Link>
+        <Link href='/'>
+          <img
+            src='/images/global/mp-logo-lock-white.png'
+            alt='Logo Horizontal Black'
+            className='header__logo header__logo--white'
           />
         </Link>
       </div>

@@ -13,8 +13,8 @@ a {
     line-height: 15.6rem;
 
     @include phone {
-        font-size: 10rem;
-        line-height: 8rem;
+        line-height: calc(100vh / 11);
+        font-size: calc(100vh / 12);
     }
 }
 
