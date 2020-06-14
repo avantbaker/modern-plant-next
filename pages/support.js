@@ -1,11 +1,12 @@
-import React, { Fragment } from 'react';
-import Head from 'next/head';
+import Page from '@components/page';
+
 import ContentBlock from '@components/content-block';
 import SplitHero from '@components/split-hero';
 import HeroBackground from '@components/hero-background';
 import HeroContent from '@components/hero-content';
 import Select from 'react-dropdown-select';
 import CalloutSection from '@components/callout-section';
+import BlogCard from '@components/blog-card';
 
 import {
   Accordion,
@@ -62,40 +63,35 @@ const subscribeContentBlockData = [
 
 export default function Support() {
   return (
-    <Fragment>
-      <Head>
-        <title>Modern Plant - Support</title>
-      </Head>
-      <div className='page-container'>
-        <SplitHero
-          contentLeft={<HeroBackground src='/images/global/greenbottle.png' />}
-          contentRight={
-            <HeroContent
-              title='Support'
-              subtitle="We're making complex remedies simple"
-              paragraph='What can you help you with?'
+    <Page title='Support'>
+      <SplitHero
+        contentLeft={<HeroBackground src='/images/global/greenbottle.png' />}
+        contentRight={
+          <HeroContent
+            title='Support'
+            subtitle="We're making complex remedies simple"
+            paragraph='What can you help you with?'
+          />
+        }
+      />
+      <div className='subscribe-callout container-fluid'>
+        <div className='subscribe-callout__left'>
+          <div className='subscribe-callout__title heading-1'>Terpenes</div>
+          <div
+            className='subscribe-callout__img-wrapper'
+            style={{ backgroundImage: `url(/images/subscriptions/curology-boxes.png)` }}
+          >
+            <img
+              src='/images/global/stamp-black.png'
+              alt=''
+              className='subscribe-callout__watermark'
             />
-          }
-        />
-        <div className='subscribe-callout container-fluid'>
-          <div className='subscribe-callout__left'>
-            <div className='subscribe-callout__title heading-1'>Terpenes</div>
-            <div
-              className='subscribe-callout__img-wrapper'
-              style={{ backgroundImage: `url(/images/subscriptions/curology-boxes.png)` }}
-            >
-              <img
-                src='/images/global/stamp-black.png'
-                alt=''
-                className='subscribe-callout__watermark'
-              />
-            </div>
           </div>
-          <div className='subscribe-callout__right subscribe-callout__content-blocks'>
-            {subscribeContentBlockData.map((item) => (
-              <ContentBlock className='subscribe-callout__content-block' {...item} />
-            ))}
-          </div>
+        </div>
+        <div className='subscribe-callout__right subscribe-callout__content-blocks'>
+          {subscribeContentBlockData.map((item) => (
+            <ContentBlock className='subscribe-callout__content-block' {...item} />
+          ))}
         </div>
       </div>
       <div className='faq container _80'>
@@ -116,9 +112,9 @@ export default function Support() {
             />
           </div>
         </div>
-        <div className='faq-accordion mb-xxl'>
+        <div className='faq-accordion'>
           <Accordion>
-            <AccordionItem className="faq-accordion__item" expanded>
+            <AccordionItem className='faq-accordion__item' expanded>
               <AccordionItemHeading>
                 <AccordionItemButton className='faq-accordion__title heading-3'>
                   What harsh truths do you prefer to ignore?
@@ -128,16 +124,22 @@ export default function Support() {
                 <p className='paragraph mb-xl'>
                   Exercitation in fugiat est ut ad ea cupidatat ut in cupidatat occaecat ut occaecat
                   consequat est minim minim esse tempor laborum consequat esse adipisicing eu
-                  reprehenderit enim. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi asperiores, voluptate laboriosam rem earum consequuntur? Aut commodi placeat omnis labore fugit ipsa, incidunt alias laudantium, veniam minima, dolorum nemo hic?
+                  reprehenderit enim. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Animi asperiores, voluptate laboriosam rem earum consequuntur? Aut commodi placeat
+                  omnis labore fugit ipsa, incidunt alias laudantium, veniam minima, dolorum nemo
+                  hic?
                 </p>
                 <p className='paragraph mb-xl'>
                   Exercitation in fugiat est ut ad ea cupidatat ut in cupidatat occaecat ut occaecat
                   consequat est minim minim esse tempor laborum consequat esse adipisicing eu
-                  reprehenderit enim. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi asperiores, voluptate laboriosam rem earum consequuntur? Aut commodi placeat omnis labore fugit ipsa, incidunt alias laudantium, veniam minima, dolorum nemo hic?
+                  reprehenderit enim. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Animi asperiores, voluptate laboriosam rem earum consequuntur? Aut commodi placeat
+                  omnis labore fugit ipsa, incidunt alias laudantium, veniam minima, dolorum nemo
+                  hic?
                 </p>
               </AccordionItemPanel>
             </AccordionItem>
-            <AccordionItem className="faq-accordion__item">
+            <AccordionItem className='faq-accordion__item'>
               <AccordionItemHeading>
                 <AccordionItemButton className='faq-accordion__title heading-3'>
                   What is prevantative healthcare?
@@ -147,16 +149,22 @@ export default function Support() {
                 <p className='paragraph mb-xl'>
                   Exercitation in fugiat est ut ad ea cupidatat ut in cupidatat occaecat ut occaecat
                   consequat est minim minim esse tempor laborum consequat esse adipisicing eu
-                  reprehenderit enim. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi asperiores, voluptate laboriosam rem earum consequuntur? Aut commodi placeat omnis labore fugit ipsa, incidunt alias laudantium, veniam minima, dolorum nemo hic?
+                  reprehenderit enim. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Animi asperiores, voluptate laboriosam rem earum consequuntur? Aut commodi placeat
+                  omnis labore fugit ipsa, incidunt alias laudantium, veniam minima, dolorum nemo
+                  hic?
                 </p>
                 <p className='paragraph mb-xl'>
                   Exercitation in fugiat est ut ad ea cupidatat ut in cupidatat occaecat ut occaecat
                   consequat est minim minim esse tempor laborum consequat esse adipisicing eu
-                  reprehenderit enim. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi asperiores, voluptate laboriosam rem earum consequuntur? Aut commodi placeat omnis labore fugit ipsa, incidunt alias laudantium, veniam minima, dolorum nemo hic?
+                  reprehenderit enim. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Animi asperiores, voluptate laboriosam rem earum consequuntur? Aut commodi placeat
+                  omnis labore fugit ipsa, incidunt alias laudantium, veniam minima, dolorum nemo
+                  hic?
                 </p>
               </AccordionItemPanel>
             </AccordionItem>
-            <AccordionItem className="faq-accordion__item">
+            <AccordionItem className='faq-accordion__item'>
               <AccordionItemHeading>
                 <AccordionItemButton className='faq-accordion__title heading-3'>
                   Are your products vegan?
@@ -166,16 +174,22 @@ export default function Support() {
                 <p className='paragraph mb-xl'>
                   Exercitation in fugiat est ut ad ea cupidatat ut in cupidatat occaecat ut occaecat
                   consequat est minim minim esse tempor laborum consequat esse adipisicing eu
-                  reprehenderit enim. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi asperiores, voluptate laboriosam rem earum consequuntur? Aut commodi placeat omnis labore fugit ipsa, incidunt alias laudantium, veniam minima, dolorum nemo hic?
+                  reprehenderit enim. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Animi asperiores, voluptate laboriosam rem earum consequuntur? Aut commodi placeat
+                  omnis labore fugit ipsa, incidunt alias laudantium, veniam minima, dolorum nemo
+                  hic?
                 </p>
                 <p className='paragraph mb-xl'>
                   Exercitation in fugiat est ut ad ea cupidatat ut in cupidatat occaecat ut occaecat
                   consequat est minim minim esse tempor laborum consequat esse adipisicing eu
-                  reprehenderit enim. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi asperiores, voluptate laboriosam rem earum consequuntur? Aut commodi placeat omnis labore fugit ipsa, incidunt alias laudantium, veniam minima, dolorum nemo hic?
+                  reprehenderit enim. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Animi asperiores, voluptate laboriosam rem earum consequuntur? Aut commodi placeat
+                  omnis labore fugit ipsa, incidunt alias laudantium, veniam minima, dolorum nemo
+                  hic?
                 </p>
               </AccordionItemPanel>
             </AccordionItem>
-            <AccordionItem className="faq-accordion__item">
+            <AccordionItem className='faq-accordion__item'>
               <AccordionItemHeading>
                 <AccordionItemButton className='faq-accordion__title heading-3'>
                   Are your products FDA Approved?
@@ -185,16 +199,22 @@ export default function Support() {
                 <p className='paragraph mb-xl'>
                   Exercitation in fugiat est ut ad ea cupidatat ut in cupidatat occaecat ut occaecat
                   consequat est minim minim esse tempor laborum consequat esse adipisicing eu
-                  reprehenderit enim. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi asperiores, voluptate laboriosam rem earum consequuntur? Aut commodi placeat omnis labore fugit ipsa, incidunt alias laudantium, veniam minima, dolorum nemo hic?
+                  reprehenderit enim. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Animi asperiores, voluptate laboriosam rem earum consequuntur? Aut commodi placeat
+                  omnis labore fugit ipsa, incidunt alias laudantium, veniam minima, dolorum nemo
+                  hic?
                 </p>
                 <p className='paragraph mb-xl'>
                   Exercitation in fugiat est ut ad ea cupidatat ut in cupidatat occaecat ut occaecat
                   consequat est minim minim esse tempor laborum consequat esse adipisicing eu
-                  reprehenderit enim. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi asperiores, voluptate laboriosam rem earum consequuntur? Aut commodi placeat omnis labore fugit ipsa, incidunt alias laudantium, veniam minima, dolorum nemo hic?
+                  reprehenderit enim. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Animi asperiores, voluptate laboriosam rem earum consequuntur? Aut commodi placeat
+                  omnis labore fugit ipsa, incidunt alias laudantium, veniam minima, dolorum nemo
+                  hic?
                 </p>
               </AccordionItemPanel>
             </AccordionItem>
-            <AccordionItem className="faq-accordion__item">
+            <AccordionItem className='faq-accordion__item'>
               <AccordionItemHeading>
                 <AccordionItemButton className='faq-accordion__title heading-3'>
                   Can I terminate a subscription without a penalty?
@@ -204,16 +224,44 @@ export default function Support() {
                 <p className='paragraph mb-xl'>
                   Exercitation in fugiat est ut ad ea cupidatat ut in cupidatat occaecat ut occaecat
                   consequat est minim minim esse tempor laborum consequat esse adipisicing eu
-                  reprehenderit enim. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi asperiores, voluptate laboriosam rem earum consequuntur? Aut commodi placeat omnis labore fugit ipsa, incidunt alias laudantium, veniam minima, dolorum nemo hic?
+                  reprehenderit enim. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Animi asperiores, voluptate laboriosam rem earum consequuntur? Aut commodi placeat
+                  omnis labore fugit ipsa, incidunt alias laudantium, veniam minima, dolorum nemo
+                  hic?
                 </p>
                 <p className='paragraph mb-xl'>
                   Exercitation in fugiat est ut ad ea cupidatat ut in cupidatat occaecat ut occaecat
                   consequat est minim minim esse tempor laborum consequat esse adipisicing eu
-                  reprehenderit enim. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi asperiores, voluptate laboriosam rem earum consequuntur? Aut commodi placeat omnis labore fugit ipsa, incidunt alias laudantium, veniam minima, dolorum nemo hic?
+                  reprehenderit enim. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Animi asperiores, voluptate laboriosam rem earum consequuntur? Aut commodi placeat
+                  omnis labore fugit ipsa, incidunt alias laudantium, veniam minima, dolorum nemo
+                  hic?
                 </p>
               </AccordionItemPanel>
             </AccordionItem>
           </Accordion>
+        </div>
+      </div>
+      <div className='related-resources'>
+        <div className='related-resources__content-container container _80'>
+          <div className='related-resources__title heading-3 mb-xl'>
+            Other terp-related sources.
+          </div>
+          <div className='related-resources__subtitle heading-5 mb-xxl'>
+            Need to do more research first? We respect that. Learn all you can! We'll be here when
+            your're done.
+          </div>
+        </div>
+        <div className='related-resources__articles'>
+          {new Array(6).fill(null).map(() => (
+            <BlogCard
+              backgroundImg={require('@images/global/leavesonbottle.png')}
+              subtitle={'Fortune Magazine'}
+              date={'MAY 10, 2020'}
+              title={'Plants with a plant. A terpene supplement brand.'}
+              link={'/news/article-title'}
+            />
+          ))}
         </div>
       </div>
       <CalloutSection
@@ -224,6 +272,6 @@ export default function Support() {
         buttonText={'Learn More'}
         boxTitleText={'Live Radically Well'}
       />
-    </Fragment>
+    </Page>
   );
 }

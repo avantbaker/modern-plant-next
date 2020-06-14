@@ -1,0 +1,14 @@
+.related-resources {
+    padding: 10rem 0 20rem 0;
+
+    &__subtitle {
+        max-width: 50rem;
+    }
+
+    &__articles {
+        display: flex;
+        overflow-x: scroll;
+        width: 100%;
+    }
+
+}

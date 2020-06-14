@@ -1,5 +1,5 @@
-import { Fragment } from 'react';
-import Head from 'next/head';
+import Page from '@components/page';
+
 import CalloutSection from '@components/callout-section';
 import FluidGallerySection from '@components/fluid-gallery-section';
 import InstagramGallery from '@components/home/grid-gallery-section';
@@ -12,27 +12,22 @@ import AboutTestimonialsContainer from '@components/about/about-testimonials-con
 
 export default function About() {
   return (
-    <Fragment>
-      <Head>
-        <title>Modern Plant - About</title>
-      </Head>
-      <div className='page-container'>
-        <AboutHeroContainer />
-        <AboutCalloutContainer />
-        <AboutTeamContainer />
-        <CalloutSection
-          title={'Is this right for you?'}
-          subtitle={
-            "We can find out. Don't sleep on your DNA, let's find out what the right terpene blends are for you."
-          }
-          buttonText={'Learn More'}
-          boxTitleText={'Live Radically Well'}
-        />
-        <AboutPartnersContainer />
-        <FluidGallerySection />
-        <AboutTestimonialsContainer />
-        <InstagramGallery />
-      </div>
-    </Fragment>
+    <Page title="About">
+      <AboutHeroContainer />
+      <AboutCalloutContainer />
+      <AboutTeamContainer />
+      <CalloutSection
+        title={'Is this right for you?'}
+        subtitle={
+          "We can find out. Don't sleep on your DNA, let's find out what the right terpene blends are for you."
+        }
+        buttonText={'Learn More'}
+        boxTitleText={'Live Radically Well'}
+      />
+      <AboutPartnersContainer />
+      <FluidGallerySection />
+      <AboutTestimonialsContainer />
+      <InstagramGallery />
+    </Page>
   );
 }

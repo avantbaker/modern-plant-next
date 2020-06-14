@@ -2,6 +2,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faInstagram, faFacebookF } from '@fortawesome/free-brands-svg-icons'
 import Input from './input';
+import Link from 'next/link';
 
 export default function Footer({
     className = '',
@@ -28,10 +29,18 @@ export default function Footer({
                 <div className="footer__section footer__section--resources">
                     <div className="footer__title heading-6--caps mb-md">Resources</div>
                     <div className="footer__resources">
-                        <a href="#" className="footer__link paragraph">My Account</a>
-                        <a href="#" className="footer__link paragraph">Our Team</a>
-                        <a href="#" className="footer__link paragraph">Support</a>
-                        <a href="#" className="footer__link paragraph">News</a>
+                        <Link href="/account">
+                            <div className="footer__link paragraph">My Account</div>
+                        </Link>
+                        <Link href="/about">
+                            <div className="footer__link paragraph">Our Team</div>
+                        </Link>
+                        <Link href="/support">
+                            <div className="footer__link paragraph">Support</div>
+                        </Link>
+                        <Link href="/news">
+                            <div className="footer__link paragraph">News</div>
+                        </Link>
                     </div>
                 </div>
                 <div className="footer__section footer__section--newsletter">
@@ -45,7 +54,7 @@ export default function Footer({
                                 type="text" 
                                 placeholder="Your Email" 
                             />
-                            <a className="footer__link paragraph--small-underlined no-flex" href={'#'}>Read Article</a>
+                            <a className="footer__link paragraph--small-underlined no-flex" href={'#'}>Subscribe</a>
                         </div>
                     </div>
                 </div>
@@ -53,11 +62,10 @@ export default function Footer({
             <div className="footer__section-wrapper footer__section-wrapper--bottom">
                 <div className="footer__section footer__section--copyright">
                     <div className="footer__copyright-container">
-                        <div className="footer__terms heading-6">Privacy | Terms</div>
+                        <Link href="/terms">
+                            <div className="footer__terms heading-6">Privacy | Terms</div>
+                        </Link>
                         <div className="footer__logo-wrapper">
-                            {/* <div className="footer__logo">
-                                <img className="footer__img footer__img--mark" src="/images/global/mp-logo-mark-black.png" alt="Modern Plant Logo Mark"/>
-                            </div> */}
                             <div className="footer__logo">
                                 <img className="footer__img footer__img--type" src="/images/global/mp-logo-type-black.png" alt="Modern Plant Logo Type"/>
                             </div>

@@ -33,14 +33,21 @@ export default class App extends NextApp {
     if (router.route === '/remedies' || router.route.includes('remedies')) {
       className = 'header--light'
     }
+    
+    if (router.route === '/mobile-navigation') {
+      className = 'mobile-nav'
+    }
 
     return (
       <div className='app-container'>
         <CacheProvider value={cache}>
           <Header className={className} />
-          <PageTransition timeout={900} classNames="page-transition">
+          {/* <PageTransition timeout={900} classNames="page-transition">
+            
+          </PageTransition> */}
+          <AnimatePresence exitBeforeEnter>
             <Component {...pageProps} key={router.route} />
-          </PageTransition>
+          </AnimatePresence>
           <Footer />
         </CacheProvider>
       </div>

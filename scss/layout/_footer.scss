@@ -114,6 +114,7 @@
 
     &__icon {
         font-size: 2rem;
+        cursor: pointer;
     }
 
     &__logo-wrapper {
@@ -124,6 +125,11 @@
         display: flex;
         align-items: center;
     }
+
+    &__link {
+        cursor: pointer;
+    }
+    
     &__img {
         width: 100%;
     }

@@ -9,18 +9,18 @@ export default function Contact() {
   return (
     <Page title="Contact">
       <SplitHero 
-          contentLeft={<HeroBackground src='/images/contact/guybehindleaf.png' />}
+          contentLeft={<HeroBackground src='/images/global/spillage.png' />}
           contentRight={
               <div className="contact-form">
                   <div className="contact-form__form">
-                      <h1 className="contact-form__title heading-1 mb-xxl">Contact</h1>
-                      <div className="contact-form__fields">
-                          <Input className="contact-form__field mb-lg" placeholder="Name" />
+                      <h1 className="contact-form__title heading-1 mb-xxl">My Account</h1>
+                      <div className="contact-form__fields mb-lg">
                           <Input className="contact-form__field mb-lg" placeholder="Email" />
-                          <Input className="contact-form__field mb-lg" placeholder="Subject" />
-                          <Input className="contact-form__field mb-lg" placeholder="Message" type="textarea" />
-                          <Button text="Send" />
+                          <Input className="contact-form__field mb-lg" placeholder="Password" />
+                          <Button text="Log In" />
                       </div>
+                      <div className="paragraph--small-underlined mb-lg">Forgot your password?</div>
+                      <div className="paragraph--small-underlined">Don't Have an account? Sign up now!</div>
                   </div>
               </div>
           }
