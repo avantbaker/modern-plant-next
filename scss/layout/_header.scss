@@ -74,6 +74,10 @@
         }
         .header__icon > path {
             color: $color-white !important;
+
+            @include phone {
+                color: black !important;
+            }
         }
     }
 

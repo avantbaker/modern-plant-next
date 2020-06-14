@@ -15,14 +15,19 @@
         @include phone {
             .hero-content {
                 &__remedy-name {
-                    margin-top: -8rem;
+                    margin-top: 0rem;
                 }
             }
             .hero-overlay__center-container--bottle {
-                top: 52%;
-                max-width: 19rem;
+                top: 62%;
+                max-width: 16rem;
+            }
+
+            .attributes-box {
+                display: none;
             }
         }
+
         @include phone-landscape {
             .hero-content__remedy-name {
                 margin-top: 10rem;
