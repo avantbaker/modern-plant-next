@@ -46,6 +46,7 @@ export default function RemediesHeroContainer() {
     <ReactFullpage
         verticalCentered={false}
         fadingEffect={true}
+        responsive={500}
         render={() => {
         return (
           <ReactFullpage.Wrapper>

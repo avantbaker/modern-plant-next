@@ -4,18 +4,18 @@
         @include phone-short {
 
             .hero-content__remedy-name__title {
-                margin-top: 8rem;
+                margin-top: 5rem;
             }
             .hero-overlay__center-container--bottle {
-                top: 66% !important;
-                max-width: 11rem !important;
+                top: 62% !important;
+                max-width: 14rem !important;
             }
         }
 
         @include phone {
             .hero-content {
                 &__remedy-name {
-                    margin-top: 0rem;
+                    margin-top: 2rem;
                 }
             }
             .hero-overlay__center-container--bottle {
