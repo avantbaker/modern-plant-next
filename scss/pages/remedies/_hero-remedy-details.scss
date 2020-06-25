@@ -49,6 +49,11 @@
                 max-width: 55rem;
             }
         }
+        @include phone {
+            .attributes-box {
+                display: none;
+            }
+        }
     }
 }
 
