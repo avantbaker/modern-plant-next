@@ -51,7 +51,9 @@ export default function Header({ className = '' }) {
         </div>
         <div className='header__navigation--user'>
           <FontAwesomeIcon className='header__icon' icon={faUserCircle} />
-          <FontAwesomeIcon className='header__icon' icon={faCartPlus} />
+          <a href="https://themodernplant.com/cart">
+            <FontAwesomeIcon className='header__icon' icon={faCartPlus} />
+          </a>
         </div>
       </div>
       <div className='header__navigation--mobile'>

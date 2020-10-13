@@ -5,6 +5,7 @@ import { cache, injectGlobal } from 'emotion';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import { AnimatePresence } from "framer-motion"
+import ContextProvider from '../components/AppContext';
 
 injectGlobal`
   ${require('../scss/main.scss')}
@@ -46,11 +47,13 @@ export default class App extends NextApp {
     return (
       <div className='app-container'>
         <CacheProvider value={cache}>
-          <Header className={className} />
-          <AnimatePresence exitBeforeEnter>
-            <Component {...pageProps} key={router.route} />
-          </AnimatePresence>
-          <Footer />
+          <ContextProvider>
+            <Header className={className} />
+            <AnimatePresence exitBeforeEnter>
+              <Component {...pageProps} key={router.route} />
+            </AnimatePresence>
+            <Footer />
+          </ContextProvider>
         </CacheProvider>
       </div>
     );

@@ -9,7 +9,7 @@ const slides = [
   }
 ];
 
-const RemedyDetailsHeroContentLeft = ({ className = '' }) => {
+const RemedyDetailsHeroContentLeft = ({ className = '', title }) => {
   return (
     <HeroContent
         className={className}
@@ -20,7 +20,7 @@ const RemedyDetailsHeroContentLeft = ({ className = '' }) => {
                 content={
                     <div className="hero-gallery-content hero-gallery-content--remedy-details">
                         <h1 className="hero-gallery-content__title heading-1 text-color-white mb-lg">
-                            Desert Sage
+                            {title}
                         </h1>
                         <Attributes />
                     </div>
