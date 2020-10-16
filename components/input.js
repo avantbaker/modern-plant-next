@@ -6,11 +6,12 @@ const Input = ({
     placeholder = '',
     type = 'text',
     onChange,
+    name,
 }) => {
     let component = type !== 'textarea' ? (
-        <input className={`input__field ${inputClass}`} type={type} placeholder={placeholder} onChange={onChange} />
+        <input className={`input__field ${inputClass}`} type={type} name={name} placeholder={placeholder} onChange={onChange} />
     ) : (
-        <textarea className={`input__field ${inputClass}`} rows={8} type={type} placeholder={placeholder} />
+        <textarea className={`input__field ${inputClass}`} rows={8} type={type} placeholder={placeholder} name={name} />
     )
     return (
         <div className={`input input__field-wrapper ${className}`}>

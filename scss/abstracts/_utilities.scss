@@ -76,3 +76,15 @@
 .text-uppercase {
     text-transform: uppercase !important;
 }
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.justify-right {
+    justify-content: flex-end;
+}
