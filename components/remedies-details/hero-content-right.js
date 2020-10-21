@@ -18,13 +18,13 @@ const RemedyDetailsHeroContentRight = ({ className = '', title, description, han
             {description}
           </div>
           <AttributesBox />
-          <div className='hero-remedy-details__certification certification'>
+          {/*<div className='hero-remedy-details__certification certification'>
             <div className='certification__item'></div>
             <div className='certification__item'></div>
             <div className='certification__item'></div>
             <div className='certification__item'></div>
             <div className='certification__item'></div>
-          </div>
+      </div> */}
         </div>
       }
     />

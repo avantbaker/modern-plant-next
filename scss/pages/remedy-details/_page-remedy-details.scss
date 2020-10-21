@@ -1,6 +1,13 @@
 .page-remedy-details {
 
     &.header {
+        .header__logo--black {
+            display: none;
+        }
+        .header__logo--white {
+            display: block;
+        }
+        
         &--light {
             .header__link {
                 color: $color-white !important;
@@ -27,4 +34,9 @@
             }
         }
     }
+}
+
+.product-details__increment-controls {
+    cursor: pointer;
+    font-size: 18px;
 }

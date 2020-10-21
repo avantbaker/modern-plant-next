@@ -6,12 +6,21 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 import { AnimatePresence } from "framer-motion"
 import ContextProvider from '../components/AppContext';
+import redirectUser from '../lib/redirectUser';
 
 injectGlobal`
   ${require('../scss/main.scss')}
 `;
 
 export default class App extends NextApp {
+
+  static async getInitialProps({ Component, ctx, pageProps, router }) {
+
+
+    redirectUser(ctx);
+
+    return {};
+  }
 
   render() {
 

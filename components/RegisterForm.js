@@ -18,7 +18,6 @@ export default function RegisterForm() {
     lastName: '',
     email: '',
     password: '',
-    // confirmPassword: '',
     acceptsMarketing: false,    
   });
 
@@ -93,7 +92,9 @@ export default function RegisterForm() {
               {success && <div className="success">Your account has been created successfully</div>}
           </div>
           <div>
-            <div className="paragraph--small-underlined mb-lg">Forgot your password?</div>
+            <Link href="/forgot-password"> 
+              <a className="paragraph--small-underlined mb-lg">Forgot your password?</a>
+            </Link>
             <Link href="/login">
               <a className="paragraph--small-underlined">Already have an account? Login in now!</a>
             </Link>

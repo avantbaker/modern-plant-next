@@ -36,27 +36,24 @@ export default function RemediesHeroContainer({ data }) {
               const metaData = remedies.find((item) => item.slug === product.node.handle);
   
               return (
-                <>
-                  <SplitHero
-                    className='section split-hero__remedies'
-                    key={product.node.id}
-                    overlay={<RemediesHeroOverlay slug={product.node.handle} productID={product.node.id} />}
-                    contentLeft={<RemediesHeroContentLeft 
-                      title={product.node.title}
-                      color={metaData && metaData.color ? metaData.color : 'color-primary'}
-                    />}
-                    contentRight={<RemediesHeroContentRight 
-                      backgroundColor={metaData && metaData.color ? metaData.color : 'color-primary'}
-                    />}
-                  />
-                  <Footer key={'footer'} className="section fp-auto-height fullpage-footer" />
-                </>
+                <SplitHero
+                  className='section split-hero__remedies'
+                  key={product.node.id}
+                  overlay={<RemediesHeroOverlay slug={product.node.handle} productID={product.node.id} />}
+                  contentLeft={<RemediesHeroContentLeft 
+                    title={product.node.title}
+                    color={metaData && metaData.color ? metaData.color : 'color-primary'}
+                  />}
+                  contentRight={<RemediesHeroContentRight 
+                    backgroundColor={metaData && metaData.color ? metaData.color : 'color-primary'}
+                  />}
+                />
               )
             })}
             <Footer key={'footer'} className="section fp-auto-height fullpage-footer" />
           </ReactFullpage.Wrapper>
         );
       }}
-    ></ReactFullpage>
+      ></ReactFullpage>
   );
 }

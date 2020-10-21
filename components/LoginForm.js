@@ -6,6 +6,7 @@ import Button from '@components/button';
 import useForm from '../utils/useForm';
 import graphql from '../lib/graphql';
 import { CUSTOMER_TOKEN_CREATE_MUTATION } from '../graphql';
+import cookies from '../lib/cookies';
 
 
 // todo: add authentication via session cookies
@@ -30,6 +31,9 @@ export default function LoginForm() {
         if (mutation && mutation.data && mutation.data.customerAccessTokenCreate) {
 
           const token = mutation?.data?.customerAccessTokenCreate?.customerAccessToken?.accessToken;
+
+          // sets accessToken session
+          cookies.setCookie("accessToken", token, 30);
 
           setSuccess(true);
           router.push(`/account/${token}`);
@@ -60,7 +64,9 @@ export default function LoginForm() {
               {success && <div className="success">Your account has been created successfully</div>}
           </div>
           <div>
-            <div className="paragraph--small-underlined mb-lg">Forgot your password?</div>
+            <Link href="/forgot-password">
+              <a className="paragraph--small-underlined mb-lg">Forgot your password?</a>
+            </Link>
             <Link href="/register">
               <a className="paragraph--small-underlined">Don't have an account? Sign up now!</a>
             </Link>

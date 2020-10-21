@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import ProductGallery from '../product-gallery';
 import Button from '../button';
 import Input from '../input';
@@ -68,15 +68,15 @@ export default function RemedyDetailsPurchasingContainer({ title, id, descriptio
             }} text='Add to Cart' />
           )}
           </AppContext.Consumer>
-          <Input placeholder={1} type="number" onChange={(event) => setQuantity(event.target.value)} />
-          {/* <div className='increment-controls product-details__increment-controls'>
-          <div className='increment-controls__control increment-controls__control--increase'>
+          <Input value={quantity} type="number" min="1" />
+          <div className='increment-controls product-details__increment-controls'>
+          <a onClick={() => setQuantity(quantity + 1)} className='increment-controls__control increment-controls__control--increase'>
           +
-          </div>
-          <div className='increment-controls__control increment-controls__control--decrease'>
+          </a>
+          <a onClick={() => quantity > 1 && setQuantity(quantity - 1)} className='increment-controls__control increment-controls__control--decrease'>
               -
-            </div>
-          </div> */}
+            </a>
+          </div>
           <div className='order-controls__type'>
               <div className="heading-5">Box</div>
           </div>

@@ -9,8 +9,27 @@ export const ALL_PRODUCTS_QUERY = `
           productType
           description
           title
+          availableForSale
+          priceRange {
+            maxVariantPrice {
+              amount
+            }
+            minVariantPrice {
+              amount
+            }
+          }
           onlineStoreUrl
+          totalInventory
           handle
+          images(first: 10) {
+            edges {
+              node {
+                id
+                originalSrc
+                altText
+              }
+            }
+          }
           variants(first: 10) {
             edges {
               node {
@@ -37,7 +56,25 @@ export const PRODUCT_QUERY = `
     title
     onlineStoreUrl
     handle
+    totalInventory
     productType
+    priceRange {
+      maxVariantPrice {
+        amount
+      }
+      minVariantPrice {
+        amount
+      }
+    }
+    images(first: 10) {
+      edges {
+        node {
+          id
+          originalSrc
+          altText
+        }
+      }
+    }
     variants(first: 10) {
       edges {
         node {

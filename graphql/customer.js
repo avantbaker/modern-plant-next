@@ -47,3 +47,25 @@ export const CUSTOMER_TOKEN_CREATE_MUTATION = `
     }
   }
 `
+
+export const CUSTOMER_TOKEN_DELETE_MUTATION = `
+  mutation($customerAccessToken: String!) {
+    customerAccessTokenDelete(customerAccessToken: $customerAccessToken) {
+      deletedAccessToken
+      userErrors {
+        message
+      }
+    }
+  }
+`
+
+export const CUSTOMER_RECOVER_MUTATION = `
+  mutation($email: String!) {
+    customerRecover(email: $email) {
+      customerUserErrors {
+        code
+        message
+      }
+    }
+  }
+`
