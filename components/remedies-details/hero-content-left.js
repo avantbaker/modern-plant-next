@@ -6,6 +6,9 @@ import Attributes from '../attributes';
 const slides = [
   {
     src: '/images/remedies/shaded-man.png'
+  },
+  {
+    src: '/images/global/apothecary.png'
   }
 ];
 

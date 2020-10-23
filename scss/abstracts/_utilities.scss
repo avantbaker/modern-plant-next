@@ -88,3 +88,14 @@
 .justify-right {
     justify-content: flex-end;
 }
+
+.opacity-on-hover {
+    transition: all 0.25s;
+    &:hover {
+        opacity: 0.6;
+    }
+}
+
+::disabled {
+    opacity: 0.2;
+}

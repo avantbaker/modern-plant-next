@@ -12,6 +12,7 @@ injectGlobal`
   ${require('../scss/main.scss')}
 `;
 
+
 export default class App extends NextApp {
 
   static async getInitialProps({ Component, ctx, pageProps, router }) {
