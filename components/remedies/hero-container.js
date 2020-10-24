@@ -23,25 +23,7 @@ let remedies = [
     },
 ];
 
-let components = [
-    ...remedies.map(({ title, color, slug }, i) => (
-        <SplitHero
-          className='section split-hero__remedies'
-          key={i}
-          overlay={<RemediesHeroOverlay slug={slug} />}
-          contentLeft={<RemediesHeroContentLeft 
-            title={title}
-            color={color}
-          />}
-          contentRight={<RemediesHeroContentRight 
-            backgroundColor={color}
-          />}
-        />
-    )),
-    <Footer key={'footer'} className="section fp-auto-height fullpage-footer" />
-];
-
-export default function RemediesHeroContainer() {
+export default function RemediesHeroContainer({ data }) {
   return (
     <ReactFullpage
         verticalCentered={false}
@@ -50,10 +32,28 @@ export default function RemediesHeroContainer() {
         render={() => {
         return (
           <ReactFullpage.Wrapper>
-            {components.map((item, i) => (item))}
+            {data && data.edges && data.edges.map((product, i) => {
+              const metaData = remedies.find((item) => item.slug === product.node.handle);
+  
+              return (
+                <SplitHero
+                  className='section split-hero__remedies'
+                  key={product.node.id}
+                  overlay={<RemediesHeroOverlay slug={product.node.handle} productID={product.node.id} />}
+                  contentLeft={<RemediesHeroContentLeft 
+                    title={product.node.title}
+                    color={metaData && metaData.color ? metaData.color : 'color-primary'}
+                  />}
+                  contentRight={<RemediesHeroContentRight 
+                    backgroundColor={metaData && metaData.color ? metaData.color : 'color-primary'}
+                  />}
+                />
+              )
+            })}
+            <Footer key={'footer'} className="section fp-auto-height fullpage-footer" />
           </ReactFullpage.Wrapper>
         );
       }}
-    ></ReactFullpage>
+      ></ReactFullpage>
   );
 }

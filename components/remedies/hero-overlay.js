@@ -3,7 +3,8 @@ import Button from '../button';
 import Link from 'next/link';
 
 export default function RemediesHeroOverlay({
-    slug = ''
+    slug = '',
+    productID = ''
 }) {
     return (
         <div className='hero-overlay'>
@@ -12,7 +13,7 @@ export default function RemediesHeroOverlay({
             </div>
             <div className="hero-overlay__bottom-right-container">
                 <div className="hero-overlay__button-container">
-                    <Link href="/remedies/[slug]" as={`/remedies/${slug}`}>
+                    <Link href={`/remedies/${productID}`}>
                         <Button type="secondary--white" text="Discover"/>
                     </Link>
                 </div>

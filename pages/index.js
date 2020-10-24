@@ -7,16 +7,19 @@ import HomeBackgroundCalloutContainer from '../components/home/background-callou
 import HomeGridGallerySection from '../components/home/grid-gallery-section';
 import HomeBlogSliderContainer from '../components/home/blog-slider';
 import Page from '@components/page';
+import ContextProvider from '../components/AppContext';
 
 export default function App() {
   return (
     <Page title="Home">
-      <HomeHeroContainer />
-      <HomeIntroInfoContainer />
-      <HomeDualCardsContainer />
-      <HomeBackgroundCalloutContainer />
-      <HomeGridGallerySection />
-      <HomeBlogSliderContainer />
+      <ContextProvider>
+        <HomeHeroContainer />
+        <HomeIntroInfoContainer />
+        <HomeDualCardsContainer />
+        <HomeBackgroundCalloutContainer />
+        <HomeGridGallerySection />
+        <HomeBlogSliderContainer />
+      </ContextProvider>
     </Page>
   );
 }
