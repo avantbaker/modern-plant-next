@@ -3,16 +3,16 @@ import { useRouter } from 'next/router';
 import Page from '@components/page';
 import SplitHero from '@components/split-hero';
 import HeroBackground from '@components/hero-background';
-import { CUSTOMER_QUERY, CUSTOMER_TOKEN_DELETE_MUTATION } from '../../graphql';
+import { CUSTOMER_QUERY } from '../../graphql';
 import graphql from '../../lib/graphql';
-import cookies from '../../lib/cookies';
+import CustomerDetail from '@components/CustomerDetail';
 
 export default function Remedy({ customer, token }) {
-  // const router = useRouter();
+  const router = useRouter();
 
-  // if (!customer) {
-  //   router.push('/');
-  // }
+  if (!customer) {
+    router.push('/');
+  }
 
   if (!customer) {
     return null;
@@ -23,18 +23,7 @@ export default function Remedy({ customer, token }) {
       <SplitHero 
           contentLeft={<HeroBackground src='/images/global/spillage.png' />}
           contentRight={
-            <div>
-              <h1 className="heading-1 mb-xxl">Hello {customer && customer.firstName} {customer.lastName}!</h1>
-
-              <button type="button" onClick={async () => {
-                const res = await graphql(CUSTOMER_TOKEN_DELETE_MUTATION, { customerAccessToken: token });
-
-                cookies.eraseCookie('accessToken');
-
-                // router.push('/');
-
-              }}>Log Out</button>
-            </div>
+            <CustomerDetail customer={customer} token={token} />
           }
       />
     </Page>

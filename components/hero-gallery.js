@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import GalleryControls from './gallery-controls'
 
 export default function HeroGallery({
@@ -6,12 +6,21 @@ export default function HeroGallery({
     content = null,
     className = ""
 }) {
-    const [activeIndex, setActiveSlide] = useState(0);
-    const [interval, resetInterval] = useState(5000);
-    
-    // setInterval(() => {
-    //     activeIndex < (slides.length - 1) ? setActiveSlide(activeIndex + 1) : setActiveSlide(0);
-    // }, interval);
+    let [activeIndex, setActiveSlide] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval((active) => {
+            if (activeIndex <= (slides.length - 1)) {
+                active = activeIndex++;
+                setActiveSlide(active);
+            } else {
+                active = 0;
+                activeIndex = 0;
+                setActiveSlide(0);
+            }
+        }, 4000, activeIndex);
+        return () => clearInterval(interval);
+    }, []);
 
     return (
         <div className={`hero-gallery ${className}`}>
@@ -35,8 +44,8 @@ export default function HeroGallery({
                         iconClass="hero-gallery__icon"
                         activeIndex={activeIndex}
                         totalSlides={slides.length}
-                        increment={() => activeIndex < (slides.length - 1) && setActiveSlide(activeIndex + 1) && resetInterval(5000)}
-                        decrement={() => activeIndex > 0 && setActiveSlide(activeIndex - 1) && resetInterval(5000)}
+                        increment={() => activeIndex < (slides.length - 1) && setActiveSlide(activeIndex + 1)}
+                        decrement={() => activeIndex > 0 && setActiveSlide(activeIndex - 1)}
                     />
                 </div>
             </div>

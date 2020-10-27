@@ -9,8 +9,6 @@ import { CUSTOMER_TOKEN_CREATE_MUTATION } from '../graphql';
 import cookies from '../lib/cookies';
 
 
-// todo: add authentication via session cookies
-
 export default function LoginForm() {
   const router = useRouter();
   const { values, updateValue } = useForm({ 
@@ -64,12 +62,16 @@ export default function LoginForm() {
               {success && <div className="success">Your account has been created successfully</div>}
           </div>
           <div>
-            <Link href="/forgot-password">
-              <a className="paragraph--small-underlined mb-lg">Forgot your password?</a>
-            </Link>
-            <Link href="/register">
-              <a className="paragraph--small-underlined">Don't have an account? Sign up now!</a>
-            </Link>
+            <div>
+              <Link href="/forgot-password">
+                <a className="paragraph--small-underlined mb-lg">Forgot your password?</a>
+              </Link>
+            </div>
+            <div>
+              <Link href="/register">
+                <a className="paragraph--small-underlined">Don't have an account? Sign up now!</a>
+              </Link>
+            </div>
           </div>
       </div>
     </form>

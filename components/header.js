@@ -50,7 +50,11 @@ export default function Header({ className = '' }) {
           </Link>
         </div>
         <div className='header__navigation--user'>
-          <FontAwesomeIcon className='header__icon' icon={faUserCircle} />
+          <Link href="/login">
+            <a>
+            <FontAwesomeIcon className='header__icon' icon={faUserCircle} />
+            </a>
+          </Link>
           <a href="https://themodernplant.com/cart">
             <FontAwesomeIcon className='header__icon' icon={faCartPlus} />
           </a>

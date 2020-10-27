@@ -48,7 +48,7 @@ export default function RemedyDetailsPurchasingContainer({ title, id, descriptio
                 
                 if (mutation && mutation.data) {
                   updateContext('checkout', mutation.data?.checkoutCreate?.checkout?.id);
-                  url = mutation.data.checkoutCreate.checkout.webUrl;
+                  url = mutation?.data?.checkoutCreate?.checkout?.webUrl;
                 }
                 
               } else {
