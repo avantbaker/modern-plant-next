@@ -3,23 +3,23 @@ import { jsx } from '@emotion/core';
 import HomeHeroContainer from '../components/home/hero-container';
 import HomeIntroInfoContainer from '../components/home/info-intro-container';
 import HomeDualCardsContainer from '../components/home/dual-cards-container';
-import HomeBackgroundCalloutContainer from '../components/home/background-callout-container'; 
+import HomeBackgroundCalloutContainer from '../components/home/background-callout-container';
 import HomeGridGallerySection from '../components/home/grid-gallery-section';
 import HomeBlogSliderContainer from '../components/home/blog-slider';
 import Page from '@components/page';
 import ContextProvider from '../components/AppContext';
 
 export default function App() {
-  return (
-    <Page title="Home">
-      <ContextProvider>
-        <HomeHeroContainer />
-        <HomeIntroInfoContainer />
-        <HomeDualCardsContainer />
-        <HomeBackgroundCalloutContainer />
-        <HomeGridGallerySection />
-        <HomeBlogSliderContainer />
-      </ContextProvider>
-    </Page>
-  );
+	return (
+		<Page title="Home">
+			<ContextProvider>
+				<HomeHeroContainer />
+				<HomeIntroInfoContainer />
+				<HomeDualCardsContainer />
+				<HomeBackgroundCalloutContainer />
+				<HomeGridGallerySection />
+				<HomeBlogSliderContainer />
+			</ContextProvider>
+		</Page>
+	);
 }
