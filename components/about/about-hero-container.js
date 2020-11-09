@@ -5,7 +5,7 @@ import HeroContent from '@components/hero-content';
 const AboutHeroContainer = () => {
 	return (
 		<SplitHero
-			contentLeft={<HeroBackground src="/images/about/sink.png" />}
+			contentLeft={<HeroBackground src="/images/updates/regularwellness.jpg" />}
 			contentRight={
 				<HeroContent
 					title="Bold Purveyors of Wellness"

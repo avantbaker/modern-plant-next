@@ -7,7 +7,7 @@ export default function BackgroundCalloutContainer() {
 		<div
 			className="background-section row"
 			style={{
-				backgroundImage: `url(${require('../../public/images/home/bottles.png')})`,
+				backgroundImage: `url(${require('@images/updates/flowersontable.jpg')})`,
 			}}
 		>
 			<div className="background-section__overlay"></div>

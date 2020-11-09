@@ -82,6 +82,7 @@ let remedies = [
 		color: 'color-secondary',
 		slug: 'desert-sage',
 		attributes: {},
+		image: '/images/updates/desertsage.jpg',
 	},
 	{
 		title: 'Cherry Wine',
@@ -90,20 +91,39 @@ let remedies = [
 		attributes: {
 			description: 'Decreases inflammation and anti-viral conditions',
 		},
+		image: '/images/updates/prettygreen.jpg',
 	},
 	{
 		title: 'Holy Lavender',
 		color: 'color-primary',
 		slug: 'holy-lavender',
 		attributes: {},
+		image: '/images/updates/lavender.jpg',
 	},
 	{
 		title: 'Custom Blend',
-		color: 'color-primary',
+		color: 'color-secondary',
 		slug: 'holy-lavender',
 		attributes: {},
+		image: '/images/updates/planthedges.jpg',
 	},
 ];
+function getImage(product) {
+	return remedies.reduce((acc, cv) => {
+		if (product.title.toLowerCase() === cv.title.toLowerCase()) {
+			acc = cv.image;
+		}
+		return acc;
+	}, '');
+}
+function getColor(product) {
+	return remedies.reduce((acc, cv) => {
+		if (product.title.toLowerCase() === cv.title.toLowerCase()) {
+			acc = cv.color;
+		}
+		return acc;
+	}, '');
+}
 
 function getPurchasing(product) {
 	return purchasing.reduce((acc, cv) => {
@@ -139,6 +159,8 @@ export default function Remedy({ product }) {
 				{...product}
 				details={getDetails(product)}
 				attributes={getAttributes(product)}
+				image={getImage(product)}
+				color={getColor(product)}
 			/>
 			<RemedyDetailsPurchasingContainer details={getPurchasing(product)} {...product} />
 			<RemediesDetailsCalloutContainer
