@@ -3,11 +3,24 @@ import ProductGallery from '../product-gallery';
 import Button from '../button';
 import Input from '../input';
 import graphql from '../../lib/graphql';
-import { CART_CHECKOUT_CREATE_MUTATION, CART_ADD_LINE_ITEMS_MUTATION } from '../../graphql';
+import {
+	CART_CHECKOUT_CREATE_MUTATION,
+	CART_ADD_LINE_ITEMS_MUTATION,
+} from '../../graphql';
 import { AppContext } from '../AppContext';
 import AddToCartButton from '../AddToCartButton';
 import isServer from 'lib/isServer';
 
+export default function RemedyDetailsPurchasingContainer({
+	title,
+	id,
+	description,
+	checkout,
+	updateContext,
+	details,
+	...props
+}) {
+	const [quantity, setQuantity] = useState(1);
 
 export default function RemedyDetailsPurchasingContainer({ title, id, description, checkout, updateContext, ...props }) {
 
