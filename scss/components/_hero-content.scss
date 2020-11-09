@@ -43,7 +43,8 @@
     &__fingerprint {
         z-index: -1;
         position: absolute;
-        top: -30%;
+        top: -5%;
+        right: -35%;
 
         @include tablet {
             display:none;
