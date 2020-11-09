@@ -10,7 +10,7 @@ const cardData = [
 		buttonText: 'Subscribe Today',
 	},
 	{
-		imageSrc: '/images/global/boxlove.png',
+		imageSrc: '/images/updates/windchime.jpg',
 		title: 'Subscribe with DNA Testing',
 		info: 'Custom crafted for you',
 		price: '$79/month',

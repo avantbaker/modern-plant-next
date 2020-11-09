@@ -9,11 +9,12 @@ const RemedyDetailsHeroContentRight = ({
 	subtitle = 'take on the protected properties of plants',
 	details = {},
 	attributes = {},
+	color = '',
 }) => {
 	return (
 		<HeroContent
 			className={className}
-			backgroundColor={handle || 'color-secondary'}
+			backgroundColor={color || handle}
 			content={
 				<div className="hero-remedy-details">
 					<h1 className="hero-remedy-details__title heading-1 text-color-white mb-xxl">
