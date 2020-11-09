@@ -55,53 +55,89 @@ function getColor(product) {
 	}, '');
 }
 export default function RemediesHeroContainer({ data }) {
+	console.log('Data', data);
 	return (
-		<ReactFullpage
-			verticalCentered={false}
-			fadingEffect={true}
-			responsive={500}
-			render={() => {
-				return (
-					<ReactFullpage.Wrapper>
-						{data &&
-							data.edges &&
-							data.edges.map((product, i) => {
-								const metaData = remedies.find(
-									(item) => item.slug === product.node.handle
-								);
-								return (
-									<SplitHero
-										className="section split-hero__remedies"
-										key={product.node.id}
-										overlay={
-											<RemediesHeroOverlay
-												slug={product.node.handle}
-												productID={product.node.id}
-											/>
-										}
-										contentLeft={
-											<RemediesHeroContentLeft
-												title={product.node.title}
-												color={
-													metaData && metaData.color ? metaData.color : getColor(product)
-												}
-											/>
-										}
-										contentRight={
-											<RemediesHeroContentRight
-												attributes={getAttributes(product)}
-												backgroundColor={
-													metaData && metaData.color ? metaData.color : getColor(product)
-												}
-											/>
-										}
-									/>
-								);
-							})}
-						<Footer key={'footer'} className="section fp-auto-height fullpage-footer" />
-					</ReactFullpage.Wrapper>
-				);
-			}}
-		></ReactFullpage>
+		// <ReactFullpage
+		// 	verticalCentered={false}
+		// 	fadingEffect={true}
+		// 	responsive={500}
+		// 	render={() => {
+		// 		return (
+		// 			<ReactFullpage.Wrapper>
+		// 				{data &&
+		// 					data.edges &&
+		// 					data.edges.map((product, i) => {
+		// 						const metaData = remedies.find(
+		// 							(item) => item.slug === product.node.handle
+		// 						);
+		// 						return (
+		// 							<SplitHero
+		// 								className="section split-hero__remedies"
+		// 								key={product.node.id}
+		// 								overlay={
+		// 									<RemediesHeroOverlay
+		// 										slug={product.node.handle}
+		// 										productID={product.node.id}
+		// 									/>
+		// 								}
+		// 								contentLeft={
+		// 									<RemediesHeroContentLeft
+		// 										title={product.node.title}
+		// 										color={
+		// 											metaData && metaData.color ? metaData.color : getColor(product)
+		// 										}
+		// 									/>
+		// 								}
+		// 								contentRight={
+		// 									<RemediesHeroContentRight
+		// 										attributes={getAttributes(product)}
+		// 										backgroundColor={
+		// 											metaData && metaData.color ? metaData.color : getColor(product)
+		// 										}
+		// 									/>
+		// 								}
+		// 							/>
+		// 						);
+		// 					})}
+		// 				<Footer key={'footer'} className="section fp-auto-height fullpage-footer" />
+		// 			</ReactFullpage.Wrapper>
+		// 		);
+		// 	}}
+		// ></ReactFullpage>
+		<>
+			{data &&
+				data.edges &&
+				data.edges.map((product, i) => {
+					const metaData = remedies.find((item) => item.slug === product.node.handle);
+					console.log('Product: ', product);
+					return (
+						<SplitHero
+							className="section split-hero__remedies"
+							key={product.node.id}
+							overlay={
+								<RemediesHeroOverlay
+									slug={product.node.handle}
+									productID={product.node.id}
+								/>
+							}
+							contentLeft={
+								<RemediesHeroContentLeft
+									title={product.node.title}
+									color={metaData && metaData.color ? metaData.color : getColor(product)}
+								/>
+							}
+							contentRight={
+								<RemediesHeroContentRight
+									attributes={getAttributes(product)}
+									backgroundColor={
+										metaData && metaData.color ? metaData.color : getColor(product)
+									}
+								/>
+							}
+						/>
+					);
+				})}
+			{/* <Footer key={'footer'} className="section fp-auto-height fullpage-footer" /> */}
+		</>
 	);
 }
