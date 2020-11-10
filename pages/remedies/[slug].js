@@ -102,8 +102,8 @@ let remedies = [
 	},
 	{
 		title: 'Custom Blend',
-		color: 'color-secondary',
-		slug: 'holy-lavender',
+		color: 'color-quartenary',
+		slug: 'custom-blend',
 		attributes: {},
 		image: '/images/updates/planthedges.jpg',
 	},
