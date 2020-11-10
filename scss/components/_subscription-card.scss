@@ -18,6 +18,9 @@
         background-position: center center;
         background-size: cover;
         background-color: $color-grey-light;
+        @include desktop-below {
+            height: 100%;
+        }
     }
 
     &__content {
