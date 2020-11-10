@@ -84,12 +84,10 @@ export default function Footer({ className = '', key = '' }) {
 				<div className="footer__section footer__section--notice">
 					<div className="footer__title heading-6--caps mb-md">FDA Notice</div>
 					<div className="footer__fda-notice paragraph--small">
-						Representations regarding the efficacy and safety of Feals have not been
-						evaluated by the Food and Drug Administration. The FDA only evaluates foods
-						and drugs, not supplements like this product. This product is not intended to
-						diagnose, prevent, treat, or cure any disease. Click here, here, and here for
-						research describing the benefits, performance, and efficacy of CBD based on
-						the expertise of relevant professionals.
+						These statements have not been evaluated by the Food and Drug Administration.
+						This product is not intended to diagnose, treat, cure, or prevent any disease.
+						As with any dietary supplement, you should advise your healthcare practitioner
+						of the use of this product.
 					</div>
 				</div>
 			</div>
