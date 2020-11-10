@@ -3,8 +3,9 @@ import SubscriptionCard from '../subscription-card';
 const cardData = [
 	{
 		imageSrc: '/images/global/greenbottle.png',
-		title: 'Subscribe w/o DNA Testing',
-		info: 'Hello Health!',
+		title: 'Hello Health!',
+		info:
+			'Subscribe without DNA testing.  Terpene selection will be generated based on completing a health survey.',
 		price: '$99',
 		term: '1 Month',
 		attributes: [{ text: '1 box a month' }],
@@ -12,8 +13,9 @@ const cardData = [
 	},
 	{
 		imageSrc: '/images/updates/windchime.jpg',
-		title: 'Subscribe w/ DNA Testing',
-		info: 'Custom Crafted For You',
+		title: 'Custom Crafted For You',
+		info:
+			'Subscribe with DNA testing that will provide you with your terpene custom blend',
 		price: '$79.99',
 		term: '1 Month',
 		attributes: [
@@ -23,21 +25,20 @@ const cardData = [
 		],
 		buttonText: 'Subscribe Today',
 	},
-	// {
-	// 	imageSrc: '/images/global/milk.png',
-	// 	title: 'Lorem ipsum dolor',
-	// 	info:
-	// 		'Upload your Diagnomics DNA Data.. Lorem ipsum dolor sit amet, consectetur adipiscing',
-	// 	price: '$299.99',
-	// 	term: '18 Months',
-	// 	attributes: [
-	// 		{ text: '4 box per month' },
-	// 		{ text: 'mix & match terpenes' },
-	// 		{ text: 'Pair with dna test kit' },
-	// 		{ text: 'Birthday box extra' },
-	// 	],
-	// 	buttonText: 'Add to Cart',
-	// },
+	{
+		imageSrc: '/images/global/milk.png',
+		title: 'Ahead of the Game',
+		info:
+			'Upload your existing DNA test results to get started on your monthly subscription.',
+		price: '$299.99',
+		term: '18 Months',
+		attributes: [
+			{ text: '1 box per month' },
+			{ text: 'mix & match terpenes' },
+			{ text: 'Pair with dna test kit' },
+		],
+		buttonText: 'Add to Cart',
+	},
 ];
 
 const SubscriptionsCardsContainer = () => {
