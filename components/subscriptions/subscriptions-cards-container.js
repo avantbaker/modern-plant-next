@@ -37,7 +37,7 @@ const cardData = [
 			{ text: 'mix & match terpenes' },
 			{ text: 'Pair with dna test kit' },
 		],
-		buttonText: 'Add to Cart',
+		buttonText: 'Subscribe Today',
 	},
 ];
 
