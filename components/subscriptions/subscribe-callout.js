@@ -28,7 +28,7 @@ const SubscribeCallout = () => {
 				<div className="subscribe-callout__title heading-1">Subscribe</div>
 				<div
 					className="subscribe-callout__img-wrapper"
-					style={{ backgroundImage: `url(/images/subscriptions/curology-boxes.png)` }}
+					style={{ backgroundImage: `url(/images/subscriptions/bottles.png)` }}
 				>
 					<img
 						src="/images/global/stamp-black.png"
