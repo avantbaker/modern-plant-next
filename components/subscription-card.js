@@ -1,19 +1,20 @@
 import Button from './button';
+import { AppContext } from './AppContext';
+import AddToCartButton from './AddToCartButton';
 
-const SubscriptionCard = ({
-    imageSrc = '',
-    title = '',
-    info = '',
-    price = 'Free',
-    caption = '',
-    buttonText = 'Add to Cart',
-    type = "primary",
-    term = '',
-    attributes = [],
-    ...rest
-}) => {
+const SubscriptionCard = ({ product }) => {
+    const buttonText = "Add To Cart";
+    const { title, description, images, priceRange, productType } = product;
+    console.log('product', product);
+
+    const imageSrc = images && images.edges && images.edges.length > 0 && images.edges[0].node.originalSrc;
+
+    const info = "hello";
+    const type = "primary";
+    const caption = 'hello';
+    const price = priceRange && priceRange.maxVariantPrice && priceRange.maxVariantPrice.amount;
     return (
-        <div className='subscription-card' {...rest}>
+        <div className='subscription-card'>
             <div
             className='subscription-card__img'
             style={{ backgroundImage: `url(${imageSrc})` }}
@@ -22,10 +23,16 @@ const SubscriptionCard = ({
                 type === 'primary' && (
                     <div className='subscription-card__content'>
                         <h5 className='subscription-card__title heading-5 mb-lg'>{title}</h5>
-                        <p className='subscription-card__info paragraph mb-xl'>{info}</p>
+                        <p className='subscription-card__info paragraph mb-xl'>{productType}</p>
                         <h6 className='subscrition-card__price heading-6 mb-md'>{price}</h6>
-                        <div className='subscription-card__caption paragraph--small mb-xxl'>{caption}</div>
-                        <Button type="secondary" text={buttonText} />
+                        <div className='subscription-card__caption paragraph--small mb-xxl'>{description}</div>
+                        <AppContext.Consumer>
+                            {({ context }) => {
+                            return (
+                                <AddToCartButton productId={product.id} client={context.shopifyClient} />
+                            )
+                            }}
+                        </AppContext.Consumer>
                     </div>
                 )
             }

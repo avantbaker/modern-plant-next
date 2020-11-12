@@ -27,12 +27,18 @@ const cardData = [
     }
 ];
 
-const MethodsSubscriptionCards = () => {
+const MethodsSubscriptionCards = ({ products }) => {
+    console.log('pro', products);
     return (
         <div className='subscription-options container _80'>
             <h4 className='heading-3 mb-xxl'>You've got Options</h4>
             <div className='subscription-options__cards'>{
-                cardData.map((card, i) => <SubscriptionCard {...card} />)
+                products && products.edges && products.edges.map((product, i) => {
+                    if (i > 2) {
+                        return null;
+                    }
+                    return <SubscriptionCard product={product.node} key={product.node.id} />  
+                })
             }</div>
         </div>
     )

@@ -2,15 +2,14 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import isServer from '../lib/isServer';
 
-function ShopifyBuyInit(client, productId, quantity) {
+function ShopifyBuyInit(client, productId, quantity = false) {
   const decodedId = window.atob(productId);
   const id = decodedId.split('/')[4];
 
   client.createComponent('product', {
     id,
-    node: document && document.getElementById('product-component-1604011529868'),
+    node: document && document.getElementById(`product-component-${productId}`),
     moneyFormat: '%24%7B%7Bamount%7D%7D',
-    quantity,
     options: {
     "product": {
       "classes": {
@@ -80,7 +79,7 @@ function ShopifyBuyInit(client, productId, quantity) {
       "contents": {
         "img": false,
         "title": false,
-        "quantity": true,
+        "quantity": quantity,
         "price": false
       },
       "text": {
@@ -205,7 +204,7 @@ export default function AddToCartButton({ client, productId, quantity }) {
   }, []);
 
   return (
-    <div id='product-component-1604011529868' />  
+  <div id={`product-component-${productId}`} />  
   )
 }
 

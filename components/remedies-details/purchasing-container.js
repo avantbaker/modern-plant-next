@@ -37,7 +37,7 @@ export default function RemedyDetailsPurchasingContainer({ title, id, descriptio
           <AppContext.Consumer>
             {({ context }) => {
               return (
-                <AddToCartButton productId={id} client={context.shopifyClient} />
+                <AddToCartButton productId={id} quantity client={context.shopifyClient} />
               )
             }}
           </AppContext.Consumer>
