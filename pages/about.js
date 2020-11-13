@@ -11,23 +11,23 @@ import AboutPartnersContainer from '@components/about/about-partners-container';
 import AboutTestimonialsContainer from '@components/about/about-testimonials-container';
 
 export default function About() {
-  return (
-    <Page title="About">
-      <AboutHeroContainer />
-      <AboutCalloutContainer />
-      <AboutTeamContainer />
-      <CalloutSection
-        title={'Is this right for you?'}
-        subtitle={
-          "We can find out. Don't sleep on your DNA, let's find out what the right terpene blends are for you."
-        }
-        buttonText={'Learn More'}
-        boxTitleText={'Live Radically Well'}
-      />
-      <AboutPartnersContainer />
-      <FluidGallerySection />
-      <AboutTestimonialsContainer />
-      <InstagramGallery />
-    </Page>
-  );
+	return (
+		<Page title="About">
+			<AboutHeroContainer />
+			<AboutCalloutContainer />
+			<AboutTeamContainer />
+			<CalloutSection
+				title={'Is this right for you?'}
+				subtitle={
+					"We can find out. Don't sleep on your DNA, let's find out what the right terpene blends are for you."
+				}
+				buttonText={'Learn More'}
+				boxTitleText={'Live Radically Well'}
+			/>
+			<AboutPartnersContainer />
+			{/* <FluidGallerySection /> */}
+			<AboutTestimonialsContainer />
+			<InstagramGallery />
+		</Page>
+	);
 }
