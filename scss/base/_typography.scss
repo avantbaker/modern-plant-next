@@ -8,9 +8,9 @@ a {
     font-weight: 500;
     font-style: normal;
     text-transform: uppercase;
-    font-size: 13rem;
+    font-size: 9.5rem;
     letter-spacing: 4px;
-    line-height: 15.6rem;
+    line-height: 10.6rem;
 
     @include phone {
         line-height: calc(100vh / 11);
