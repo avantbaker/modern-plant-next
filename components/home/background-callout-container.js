@@ -11,7 +11,7 @@ export default function BackgroundCalloutContainer() {
 			}}
 		>
 			<div className="background-section__overlay"></div>
-			<div className="background-section__container col-xs-12 col-sm-offset-6 col-md-offset-7">
+			<div className="background-section__container col-xs-12">
 				<div className="background-section__content">
 					<h3 className="heading-3 background-section__title mb-xl">
 						Your Wellness Answers Start Here

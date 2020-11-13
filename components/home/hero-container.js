@@ -9,7 +9,7 @@ export default function HomeHeroContainer() {
 			contentLeft={<HeroBackground src={require('@images/updates/eyeinleaves.jpg')} />}
 			contentRight={
 				<HeroContent
-					title="Optimize Your Immunity &amp; Energy"
+					title="Optimize Immunity &amp; Energy"
 					subtitle="Terpene Remedies that will change your health!"
 					paragraph="Traditional apothecary remedies, refined- and with a modern spin."
 					buttonText="Learn More"

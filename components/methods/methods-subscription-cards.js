@@ -2,28 +2,43 @@ import SubscriptionCard from '../subscription-card';
 
 const cardData = [
 	{
-		imageSrc: '/images/global/greenbottle.png',
-		title: 'Subscribe without DNA Testing',
-		info: 'Hello Health!',
+		imageSrc: '/images/subscriptions/option1.jpg',
+		title: 'Hello Health!',
+		info:
+			'Subscribe without DNA testing.  Terpene selection will be generated based on completing a health survey.',
 		price: '$99/month',
-		// caption: 'Upload your Diagnomics DNA Data.. Lorem ipsum dolor sit amet, consectetur adipiscing',
+		term: '12 Month',
+		// attributes: [{ text: '1 box a month' }],
 		buttonText: 'Subscribe Today',
 	},
 	{
 		imageSrc: '/images/updates/windchime.jpg',
-		title: 'Subscribe with DNA Testing',
-		info: 'Custom crafted for you',
+		title: 'Custom Crafted',
+		info:
+			'Subscribe with DNA testing that will provide you with your terpene custom blend',
 		price: '$79/month',
+		term: '12 Month',
+		// attributes: [
+		// 	{ text: '1 box per month' },
+		// 	{ text: 'mix & match terpenes' },
+		// 	{ text: 'Pair with dna test kit' },
+		// ],
 		buttonText: 'Subscribe Today',
 	},
-	// {
-	//     imageSrc: '/images/global/milk.png',
-	//     title: 'Lorem ipsum dolor',
-	//     info: 'Upload your Diagnomics DNA Data.. Lorem ipsum dolor sit amet, consectetur adipiscing',
-	//     price: '$150',
-	//     caption: 'Upload your Diagnomics DNA Data.. Lorem ipsum dolor sit amet, consectetur adipiscing',
-	//     buttonText: 'Add to Cart'
-	// }
+	{
+		imageSrc: '/images/subscriptions/option3.jpg',
+		title: 'Ahead of the Game',
+		info:
+			'Upload your existing DNA test results to get started on your monthly subscription.',
+		price: '$79/month',
+		term: '12 Month',
+		// attributes: [
+		// 	{ text: '1 box per month' },
+		// 	{ text: 'mix & match terpenes' },
+		// 	{ text: 'Pair with dna test kit' },
+		// ],
+		buttonText: 'Subscribe Today',
+	},
 ];
 
 const MethodsSubscriptionCards = () => {
@@ -32,7 +47,7 @@ const MethodsSubscriptionCards = () => {
 			<h4 className="heading-3 mb-xxl">You've got Options</h4>
 			<div className="subscription-options__cards">
 				{cardData.map((card, i) => (
-					<SubscriptionCard {...card} />
+					<SubscriptionCard type="secondary" {...card} />
 				))}
 			</div>
 		</div>

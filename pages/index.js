@@ -18,7 +18,7 @@ export default function App() {
 				<HomeDualCardsContainer />
 				<HomeBackgroundCalloutContainer />
 				<HomeGridGallerySection />
-				<HomeBlogSliderContainer />
+				{/* <HomeBlogSliderContainer /> */}
 			</ContextProvider>
 		</Page>
 	);
