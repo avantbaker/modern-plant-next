@@ -56,7 +56,6 @@ const MethodsSubscriptionCards = ({ products }) => {
 						return (
 							<SubscriptionCard
 								type="secondary"
-								{...card}
 								product={product.node}
 								key={product.node.id}
 							/>

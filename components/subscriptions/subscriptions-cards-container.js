@@ -41,14 +41,25 @@ const cardData = [
 	},
 ];
 
-const SubscriptionsCardsContainer = () => {
+const SubscriptionsCardsContainer = ({ products }) => {
 	return (
 		<div className="subscriptions-cards subscription-options container _80">
 			<h4 className="heading-3 mb-xxl">Subscribe to Regular Wellness</h4>
 			<div className="subscription-options__cards">
-				{cardData.map((card, i) => (
-					<SubscriptionCard type="secondary" {...card} />
-				))}
+				{products &&
+					products.edges &&
+					products.edges.map((product, i) => {
+						if (i > 2) {
+							return null;
+						}
+						return (
+							<SubscriptionCard
+								type="secondary"
+								product={product.node}
+								key={product.node.id}
+							/>
+						);
+					})}
 			</div>
 		</div>
 	);
