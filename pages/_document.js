@@ -1,5 +1,6 @@
 import Document, { Head, Main, NextScript } from 'next/document';
 import { extractCritical } from 'emotion-server';
+import isServer from '../lib/isServer';
 
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
@@ -9,6 +10,8 @@ export default class MyDocument extends Document {
   }
 
   render() {
+
+          
     return (
       <html>
         <Head>

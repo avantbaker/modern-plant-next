@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ProductGallery from '../product-gallery';
 import Button from '../button';
 import Input from '../input';
@@ -6,22 +6,29 @@ import graphql from '../../lib/graphql';
 import { CART_CHECKOUT_CREATE_MUTATION, CART_ADD_LINE_ITEMS_MUTATION } from '../../graphql';
 import { AppContext } from '../AppContext';
 import AddToCartButton from '../AddToCartButton';
-import isServer from 'lib/isServer';
+import { createSubscription } from 'lib/recharge';
 
 
-export default function RemedyDetailsPurchasingContainer({ title, id, description, checkout, updateContext, ...props }) {
+export default function RemedyDetailsPurchasingContainer({ title, id, description, images, checkout, updateContext, ...props }) {
 
   // Shopify expects the product variantId when creating or adding to a checkout
   const variantId = props.variants && props.variants.edges && props.variants.edges.length > 0 && props.variants.edges[0].node.id;
   return (
     <div className='remedy-details-purchasing container _80'>
-      <ProductGallery />
+      <ProductGallery images={images} />
       <div className='product-details'>
         <div className='product-details__title heading-3 mb-md'>Your {title} Terpenes</div>
-        <div className='product-details__subtitle heading-5 mb-xxl'>
+        <div className='product-details__subtitle heading-5 mb-xxl'>  
           {description}
         </div>
-        <Button text='Subscribe' className="mb-md" />
+ 
+        <Button text='Subscribe' className="mb-md" onClick={async () => {
+          const res = await createSubscription(variantId);
+
+          console.log('creating subscription', res);
+        }} />
+
+        <div className="aod_buynow"></div>
         <div className='heading-6'>Make wellness a part of your routine</div>
         <div className='product-details__info paragraph--small mb-md'>
           Subscribe to {title} and get your monthly or weekly box of terpenes delivered to your

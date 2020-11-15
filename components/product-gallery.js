@@ -3,17 +3,24 @@ import GalleryControls from './gallery-controls';
 
 const slides = [
     {
-        src: '/images/global/modern-bottle-white.png',
+        node: {
+            originalSrc: '/images/global/modern-bottle-white.png',
+        }
     },
     {
-        src: '/images/global/modern-bottle-white.png',
+        node: {
+            originalSrc: '/images/global/modern-bottle-white.png',
+        }
     }
 ];
 
 export default function ProductGallery({
     className = '',
+    images,
 }) {
     let [activeIndex, setActiveSlide] = useState(0);
+    // todo: add better images from shopify
+    const gallery = slides;
     
     useEffect(() => {
         const interval = setInterval((active) => {
@@ -38,9 +45,9 @@ export default function ProductGallery({
                     <div className="product-gallery__lightbox-background"></div>
                     <div className="product-gallery__lightbox-content content">
                     {
-                        slides.map((slide, i) => (
+                        gallery.map((slide, i) => (
                             <div className={`product-gallery__slide product-gallery__slide--${i} ${activeIndex === i ? 'active' : ''}`} key={i}>
-                                <img src={slide.src} />
+                                <img src={slide.node.originalSrc} />
                             </div>
                         ))
                     }

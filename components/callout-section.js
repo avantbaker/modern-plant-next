@@ -6,10 +6,11 @@ export default function CalloutSection({
     title = '',
     subtitle = '',
     buttonText = '',
-    boxTitleText = ''
+    boxTitleText = '',
+    handle,
 }) {
     return (
-        <div className="callout-setion container-fluid bg-color-secondary">
+        <div className={`callout-setion container-fluid bg-${handle}`}>
             <div className="callout-section__container container _80">
                 <div className="callout-section__left">
                     <div className="heading-3 mb-sm text-color-white">{title}</div>
