@@ -3,11 +3,9 @@ import ProductGallery from '../product-gallery';
 import Button from '../button';
 import Input from '../input';
 import graphql from '../../lib/graphql';
-import { CART_CHECKOUT_CREATE_MUTATION, CART_ADD_LINE_ITEMS_MUTATION } from '../../graphql';
+import { CART_CHECKOUT_CREATE_MUTATION } from '../../graphql';
 import { AppContext } from '../AppContext';
 import AddToCartButton from '../AddToCartButton';
-import { createSubscription } from 'lib/recharge';
-
 
 export default function RemedyDetailsPurchasingContainer({ title, id, description, images, checkout, updateContext, ...props }) {
 
@@ -23,9 +21,21 @@ export default function RemedyDetailsPurchasingContainer({ title, id, descriptio
         </div>
  
         <Button text='Subscribe' className="mb-md" onClick={async () => {
-          const res = await createSubscription(variantId);
+          const product = {
+            quantity: 1,
+            variantId,
+          };
+          const res = await graphql(CART_CHECKOUT_CREATE_MUTATION, product);
 
-          console.log('creating subscription', res);
+          if (res && res.data && res.data.checkoutCreate) {
+            const checkoutId = res?.data?.checkoutCreate?.checkout?.id;
+            const decodedId = window.atob(checkoutId);
+            const id = decodedId.split('/')[4].split('?')[0];
+            console.log('decod', decodedId, id);
+            const rechargeUrl = `https://checkout.rechargeapps.com/r/checkout?myshopify_domain=themodernplant.myshopify.com&cart_token=${id}`;
+
+            window.location = rechargeUrl;
+          }
         }} />
 
         <div className="aod_buynow"></div>
