@@ -19,6 +19,10 @@
         background-repeat: no-repeat;
         background-color: #fff;
         border: 2px solid $color-grey-light;
+
+        &--secondary {
+            background-size: cover;
+        }
     }
 
     &__content {

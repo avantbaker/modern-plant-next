@@ -164,12 +164,14 @@ export default function Remedy({ product }) {
 			/>
 			<RemedyDetailsPurchasingContainer details={getPurchasing(product)} {...product} />
 			<RemediesDetailsCalloutContainer
+				{...product}
 				title={`${product.title} Remedy`}
 				subtitle={
 					'Kick the sickness and find the cure to all of your antiviral symptoms.'
 				}
 				buttonText={'Buy Now'}
 				boxTitleText={'Live Radically Well'}
+				handle={getColor(product)}
 			/>
 		</Page>
 	);

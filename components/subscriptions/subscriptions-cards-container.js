@@ -3,7 +3,7 @@ import SubscriptionCard from '../subscription-card';
 const cardData = [
 	{
 		imageSrc: '/images/subscriptions/option1.jpg',
-		title: 'Hello Health!',
+		title: 'Hello Health',
 		info:
 			'Subscribe without DNA testing.  Terpene selection will be generated based on completing a health survey.',
 		price: '$99/month',
@@ -49,6 +49,7 @@ const SubscriptionsCardsContainer = ({ products }) => {
 				{products &&
 					products.edges &&
 					products.edges.map((product, i) => {
+						console.log('Product: ', product);
 						if (i > 2) {
 							return null;
 						}
@@ -57,6 +58,7 @@ const SubscriptionsCardsContainer = ({ products }) => {
 								type="secondary"
 								product={product.node}
 								key={product.node.id}
+								details={cardData[i]}
 							/>
 						);
 					})}
