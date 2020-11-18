@@ -27,14 +27,17 @@ export default function RemedyDetailsPurchasingContainer({ title, id, descriptio
           };
           const res = await graphql(CART_CHECKOUT_CREATE_MUTATION, product);
 
+          // todo: add item (auto-renew version) to checkout 
+
           if (res && res.data && res.data.checkoutCreate) {
             const checkoutId = res?.data?.checkoutCreate?.checkout?.id;
             const decodedId = window.atob(checkoutId);
             const id = decodedId.split('/')[4].split('?')[0];
-            console.log('decod', decodedId, id);
             const rechargeUrl = `https://checkout.rechargeapps.com/r/checkout?myshopify_domain=themodernplant.myshopify.com&cart_token=${id}`;
 
-            window.location = rechargeUrl;
+            setTimeout(() => {
+              window.location = rechargeUrl;
+            }, 3000);
           }
         }} />
 
