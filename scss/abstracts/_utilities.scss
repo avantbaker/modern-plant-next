@@ -54,6 +54,9 @@
 .bg-modern-plant-box-w-free-dna-test {
     background-color: $color-tertiary !important;
 }
+.bg-color-quartenary, .bg-custom-blend {
+    background-color: $color-brand-dark !important;
+}
 
 .text-color-white {
     color: $color-white !important;
@@ -67,6 +70,9 @@
 }
 .text-color-tertiary {
     color: $color-tertiary !important;
+}
+.text-color-quartenary {
+    color: $color-brand-dark !important;
 }
 
 .text-color-brand {
