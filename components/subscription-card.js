@@ -2,7 +2,7 @@ import Button from './button';
 import { AppContext } from './AppContext';
 import AddToCartButton from './AddToCartButton';
 
-const SubscriptionCard = ({ product }) => {
+const SubscriptionCard = ({ product, details, type = 'primary' }) => {
 	if (!product) {
 		return null;
 	}
