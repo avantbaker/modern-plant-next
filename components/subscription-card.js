@@ -3,9 +3,12 @@ import { AppContext } from './AppContext';
 import AddToCartButton from './AddToCartButton';
 
 const SubscriptionCard = ({ product }) => {
+
+    if (!product) {
+        return null;
+    }
     const buttonText = "Add To Cart";
     const { title, description, images, priceRange, productType } = product;
-    console.log('product', product);
 
     const imageSrc = images && images.edges && images.edges.length > 0 && images.edges[0].node.originalSrc;
 
