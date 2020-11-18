@@ -3,12 +3,10 @@ import { AppContext } from './AppContext';
 import AddToCartButton from './AddToCartButton';
 
 const SubscriptionCard = ({ product }) => {
-
-    if (!product) {
-        return null;
-    }
-    const buttonText = "Add To Cart";
-    const { title, description, images, priceRange, productType } = product;
+	if (!product) {
+		return null;
+	}
+	const buttonText = 'Add To Cart';
 
 	const { title, description, images, priceRange, productType } = product;
 
