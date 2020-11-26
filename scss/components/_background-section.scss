@@ -50,14 +50,22 @@
         padding: 10rem 10rem 10rem 10rem;
         z-index: 3;
 
+        
         @include desktop {
             padding-bottom: 10rem;
         }
-
+        
         @include phone {
             justify-content: center;
             align-items: center;
             text-align: center;
+        }
+
+        &.bottomMobile {
+
+            @include phone {
+                justify-content: flex-end !important;
+            }
         }
     }
     &__details {

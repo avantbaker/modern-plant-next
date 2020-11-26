@@ -95,54 +95,40 @@ define('./sw.js', ['./workbox-b90066a8'], function (workbox) {
 	 * See https://goo.gl/2aRDsh
 	 */
 
-	workbox.precacheAndRoute(
-		[
-			{
-				url: '/_next/static/runtime/amp.js',
-				revision: '448564b2ecdefde43bd36b481b74be5f',
-			},
-			{
-				url: '/_next/static/runtime/amp.js.map',
-				revision: '151ff324f19c73a7d9934f1e640c6656',
-			},
-			{
-				url: '/_next/static/runtime/main.js',
-				revision: '3c5a6eb6b708e15916854be9e9cf284a',
-			},
-			{
-				url: '/_next/static/runtime/main.js.map',
-				revision: '13cacd9e418debf8008d897b81e981e2',
-			},
-			{
-				url: '/_next/static/runtime/polyfills.js',
-				revision: 'cf6f4b12f4634f8f79378d41f3a855a4',
-			},
-			{
-				url: '/_next/static/runtime/polyfills.js.map',
-				revision: '82dca635a629d8ab38c3ad85b2ad65a2',
-			},
-			{
-				url: '/_next/static/runtime/react-refresh.js',
-				revision: '57d6b6dd46444111cc6c2cb191ec72bc',
-			},
-			{
-				url: '/_next/static/runtime/react-refresh.js.map',
-				revision: '3eefcd56d3f5bfcc8b7c33d935f42689',
-			},
-			{
-				url: '/_next/static/runtime/webpack.js',
-				revision: '21b37dc5df8d03b1d3328b7b2681724e',
-			},
-			{
-				url: '/_next/static/runtime/webpack.js.map',
-				revision: 'a87efc04b939850e05eab2123b2fb2ff',
-			},
-		],
-		{
-			ignoreURLParametersMatching: [/ts/],
-		}
-	);
-	workbox.cleanupOutdatedCaches();
+  workbox.precacheAndRoute([{
+    "url": "/_next/static/runtime/amp.js",
+    "revision": "448564b2ecdefde43bd36b481b74be5f"
+  }, {
+    "url": "/_next/static/runtime/amp.js.map",
+    "revision": "151ff324f19c73a7d9934f1e640c6656"
+  }, {
+    "url": "/_next/static/runtime/main.js",
+    "revision": "3c5a6eb6b708e15916854be9e9cf284a"
+  }, {
+    "url": "/_next/static/runtime/main.js.map",
+    "revision": "13cacd9e418debf8008d897b81e981e2"
+  }, {
+    "url": "/_next/static/runtime/polyfills.js",
+    "revision": "cf6f4b12f4634f8f79378d41f3a855a4"
+  }, {
+    "url": "/_next/static/runtime/polyfills.js.map",
+    "revision": "82dca635a629d8ab38c3ad85b2ad65a2"
+  }, {
+    "url": "/_next/static/runtime/react-refresh.js",
+    "revision": "57d6b6dd46444111cc6c2cb191ec72bc"
+  }, {
+    "url": "/_next/static/runtime/react-refresh.js.map",
+    "revision": "3eefcd56d3f5bfcc8b7c33d935f42689"
+  }, {
+    "url": "/_next/static/runtime/webpack.js",
+    "revision": "2bc5037a1f59c248a962afb303cd4c7e"
+  }, {
+    "url": "/_next/static/runtime/webpack.js.map",
+    "revision": "f27e3651e1b846b4de18e6383d6ea787"
+  }], {
+    "ignoreURLParametersMatching": [/ts/]
+  });
+  workbox.cleanupOutdatedCaches();
 
 	workbox.precacheAndRoute(
 		[

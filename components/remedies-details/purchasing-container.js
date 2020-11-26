@@ -1,44 +1,43 @@
-import { createSubscription } from 'lib/recharge';
-import React from 'react';
-import AddToCartButton from '../AddToCartButton';
-import { AppContext } from '../AppContext';
-import Button from '../button';
+import React, { useEffect } from 'react';
 import ProductGallery from '../product-gallery';
+import Button from '../button';
+import Input from '../input';
+import graphql from '../../lib/graphql';
+import { CART_CHECKOUT_CREATE_MUTATION } from '../../graphql';
+import { AppContext } from '../AppContext';
+import AddToCartButton from '../AddToCartButton';
 
-export default function RemedyDetailsPurchasingContainer({
-	title,
-	id,
-	description,
-	images,
-	checkout,
-	updateContext,
-	...props
-}) {
-	// Shopify expects the product variantId when creating or adding to a checkout
-	const variantId =
-		props.variants &&
-		props.variants.edges &&
-		props.variants.edges.length > 0 &&
-		props.variants.edges[0].node.id;
-	return (
-		<div className="remedy-details-purchasing container _80">
-			<ProductGallery images={images} />
-			<div className="product-details">
-				<div className="product-details__title heading-3 mb-md">
-					Your {title} Terpenes
-				</div>
-				<div className="product-details__subtitle heading-5 mb-xxl">{description}</div>
+export default function RemedyDetailsPurchasingContainer({ title, id, description, images, checkout, updateContext, ...props }) {
 
-				<Button
-					text="Subscribe"
-					className="mb-md"
-					onClick={async () => {
-						const res = await createSubscription(variantId);
+  // Shopify expects the product variantId when creating or adding to a checkout
+  const variantId = props.variants && props.variants.edges && props.variants.edges.length > 0 && props.variants.edges[0].node.id;
+  return (
+    <div className='remedy-details-purchasing container _80'>
+      <ProductGallery images={images} />
+      <div className='product-details'>
+        <div className='product-details__title heading-3 mb-md'>Your {title} Terpenes</div>
+        <div className='product-details__subtitle heading-5 mb-xxl'>  
+          {description}
+        </div>
+ 
+        <Button text='Subscribe' className="mb-md" onClick={async () => {
+          const product = {
+            quantity: 1,
+            variantId,
+          };
+          const res = await graphql(CART_CHECKOUT_CREATE_MUTATION, product);
 
-						console.log('creating subscription', res);
-					}}
-				/>
+          // todo: add item (auto-renew version) to checkout 
 
+          if (res && res.data && res.data.checkoutCreate) {
+            const checkoutId = res?.data?.checkoutCreate?.checkout?.id;
+            const decodedId = window.atob(checkoutId);
+            const id = decodedId.split('/')[4].split('?')[0];
+            const rechargeUrl = `https://checkout.rechargeapps.com/r/checkout?myshopify_domain=themodernplant.myshopify.com&cart_token=${id}`;
+
+            window.location.href = rechargeUrl;
+          }
+        }} />
 				<div className="aod_buynow"></div>
 				<div className="heading-6">Make wellness a part of your routine</div>
 				<div className="product-details__info paragraph--small mb-md">

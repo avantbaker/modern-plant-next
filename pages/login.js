@@ -20,7 +20,11 @@ export default function Contact() {
 export const getServerSideProps = async (ctx) => {
 
   redirectUser(ctx);
-
-  return {};
+  
+  return {
+		props: {
+			user: null,
+		},
+	};
 };
 

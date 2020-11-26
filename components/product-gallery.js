@@ -23,6 +23,9 @@ export default function ProductGallery({
     const gallery = slides;
     
     useEffect(() => {
+        if (slides.length <= 1) {
+            return null;
+        }
         const interval = setInterval((active) => {
             if (activeIndex <= (slides.length - 1)) {
                 active = activeIndex++;
@@ -55,7 +58,7 @@ export default function ProductGallery({
                 </div>
             </div>
             <div className="product-gallery__gallery-controls">
-                <GalleryControls 
+                {slides.length > 1 && <GalleryControls 
                     className="hero-gallery__controls-wrapper"
                     iconClass="hero-gallery__icon"
                     activeIndex={activeIndex}
@@ -63,7 +66,7 @@ export default function ProductGallery({
                     increment={() => setActiveSlide(activeIndex + 1)}
                     decrement={() => setActiveSlide(activeIndex - 1)}
                 
-                />
+                />}
             </div>
         </div>
     )

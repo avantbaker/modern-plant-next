@@ -53,7 +53,13 @@ const MethodsSubscriptionCards = ({ products }) => {
 						if (i > 2) {
 							return null;
 						}
-						return <SubscriptionCard product={product.node} key={product.node.id} />;
+						return (
+							<SubscriptionCard
+								details={cardData[i]}
+								product={product.node}
+								key={product.node.id}
+							/>
+						);
 					})}
 			</div>
 		</div>

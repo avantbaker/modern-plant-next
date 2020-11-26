@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '../button';
 import Link from 'next/link';
 
-export default function BackgroundCalloutContainer() {
+export default function BackgroundCalloutContainer({ bottomMobile }) {
 	return (
 		<div
 			className="background-section row"
@@ -12,7 +12,7 @@ export default function BackgroundCalloutContainer() {
 		>
 			<div className="background-section__overlay"></div>
 			<div className="background-section__container col-xs-12">
-				<div className="background-section__content">
+				<div className={ `background-section__content ${bottomMobile ? 'bottomMobile' : ''}`}>
 					<h3 className="heading-3 background-section__title mb-xl">
 						Your Wellness Answers Start Here
 					</h3>

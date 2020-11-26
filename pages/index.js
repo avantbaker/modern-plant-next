@@ -16,7 +16,7 @@ export default function App() {
 				<HomeHeroContainer />
 				<HomeIntroInfoContainer />
 				<HomeDualCardsContainer />
-				<HomeBackgroundCalloutContainer />
+				<HomeBackgroundCalloutContainer bottomMobile />
 				<HomeGridGallerySection />
 				{/* <HomeBlogSliderContainer /> */}
 			</ContextProvider>

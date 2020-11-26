@@ -3,7 +3,7 @@ import Page from '@components/page';
 import RemedyDetailsHeroContainer from '../../components/remedies-details/hero-container';
 import RemedyDetailsPurchasingContainer from '../../components/remedies-details/purchasing-container';
 import RemediesDetailsCalloutContainer from '../../components/remedies-details/remedies-details-callout-container';
-import { PRODUCT_QUERY } from '../../graphql';
+import { CHECKOUT_QUERY, PRODUCT_QUERY } from '../../graphql';
 import graphql from '../../lib/graphql';
 
 const details = [

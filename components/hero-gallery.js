@@ -9,6 +9,9 @@ export default function HeroGallery({
     let [activeIndex, setActiveSlide] = useState(0);
 
     useEffect(() => {
+        if (slides.length <= 1) {
+            return null;
+        }
         const interval = setInterval((active) => {
             if (activeIndex <= (slides.length - 1)) {
                 active = activeIndex++;
@@ -39,14 +42,14 @@ export default function HeroGallery({
             <div className="hero-gallery__content-wrapper">
                 <div className="hero-gallery__content">
                     {content}
-                    <GalleryControls 
+                    {slides.length > 1 && (<GalleryControls 
                         className="hero-gallery__controls-wrapper"
                         iconClass="hero-gallery__icon"
                         activeIndex={activeIndex}
                         totalSlides={slides.length}
                         increment={() => activeIndex < (slides.length - 1) && setActiveSlide(activeIndex + 1)}
                         decrement={() => activeIndex > 0 && setActiveSlide(activeIndex - 1)}
-                    />
+                    />)}
                 </div>
             </div>
         </div>
