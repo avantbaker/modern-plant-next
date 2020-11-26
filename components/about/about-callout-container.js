@@ -12,7 +12,7 @@ const AboutCalloutContainer = () => {
 			<div className="about-callout__section about-callout__right">
 				<div className="about-callout__content content">
 					<BoxTitle className="about-callout__box-title" text="Live Radically Well" />
-					<div className="about-callout__caption heading-4">
+					<div className="about-callout__caption heading-3">
 						We’re dedicated to helping you maintain health and wellness by harnessing the
 						healing power of whole plants using strategic scientific technology.
 					</div>

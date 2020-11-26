@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Input from '@components/input';
@@ -16,7 +16,6 @@ export default function LoginForm() {
     password: '',
   });
 
-  const [success, setSuccess] = useState(false);
 
   return (
     <form 
@@ -33,7 +32,6 @@ export default function LoginForm() {
           // sets accessToken session
           cookies.setCookie("accessToken", token, 30);
 
-          setSuccess(true);
           router.push(`/account/${token}`);
         }
       }}
@@ -59,7 +57,6 @@ export default function LoginForm() {
               <div className="mt-md">
                 <Button text="Login" buttonType="submit" />
               </div>
-              {success && <div className="success">Your account has been created successfully</div>}
           </div>
           <div>
             <div>

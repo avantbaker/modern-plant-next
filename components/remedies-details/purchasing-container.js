@@ -35,9 +35,7 @@ export default function RemedyDetailsPurchasingContainer({ title, id, descriptio
             const id = decodedId.split('/')[4].split('?')[0];
             const rechargeUrl = `https://checkout.rechargeapps.com/r/checkout?myshopify_domain=themodernplant.myshopify.com&cart_token=${id}`;
 
-            setTimeout(() => {
-              window.location = rechargeUrl;
-            }, 3000);
+            window.location.href = rechargeUrl;
           }
         }} />
 				<div className="aod_buynow"></div>

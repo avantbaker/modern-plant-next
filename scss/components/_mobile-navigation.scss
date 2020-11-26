@@ -18,3 +18,13 @@
         display: block;
     }
 }
+
+.header__navigation--mobile {
+
+    &.light {
+        svg, path {
+            color: #fff;
+            fill: #fff;
+        }
+    }
+}

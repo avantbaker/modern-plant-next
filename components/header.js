@@ -14,6 +14,8 @@ export default function Header({ className = '', route }) {
 	if (route === '/') {
 		logo = 'mp-logo-lock-white';
 	}
+
+	const isLight = route === '/';
 	return (
 		<div id="header" className={`header ${className}`}>
 			<div className="header__logo-wrapper">
@@ -59,13 +61,15 @@ export default function Header({ className = '', route }) {
 					</Link>
 				</div>
 				<div className="header__navigation--user">
-					<FontAwesomeIcon className="header__icon" icon={faUserCircle} />
+					<Link href="/login">
+						<FontAwesomeIcon className="header__icon" icon={faUserCircle} />
+					</Link>
 					<a href="https://themodernplant.com/cart">
 						<FontAwesomeIcon className="header__icon" icon={faCartPlus} />
 					</a>
 				</div>
 			</div>
-			<div className="header__navigation--mobile">
+			<div className={`header__navigation--mobile ${isLight ? 'light' : ''}`}>
 				<Link href="/mobile-navigation">
 					<FontAwesomeIcon
 						className="header__icon header__navigation-open"
